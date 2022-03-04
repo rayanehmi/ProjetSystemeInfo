@@ -4,12 +4,20 @@
 /* #include... */
 %}
 /* Déclarations des classes et des expressions régulières */
-...
+
 %%
-/* Règles de traduction */
+
+main {printf("Main detecte");}
+printf {return tPRINTF;}
+return {return tRETURN;}
+if {return tIF;}
+else {return tELSE;}
+while {return tWHILE;}
+
 int {return tINT;}
+const {return tCONST;}
 [0-9]+ {return tNB;}
-[a-Z]+ {return tID;}
+[A-z]([A-z]|_|[0-9])* {return tID;}
 
 "+" {return tADD;}
 "-" {return tMIN;}
@@ -22,14 +30,12 @@ int {return tINT;}
 ")" {return tPARCLOSE;}
 "{" {return tBRAOPEN;}
 "}" {return tBRACLOSE;}
-
-main {return tMAIN;}
-return {return tRETURN;}
-if {return tIF;}
-else {return tELSE;}
-while {return tWHILE;}
-
-
+" " {return tSPACE;}
+"," {return tCOMMA;}
+"\t" {return tTAB;}
+"\n" {return tBREAK;}
+"\"" {return tQUOTE;}
+[ \t]+ {return ;} /* big coup de genie de paul */
 %%
 /* mi est une expression régulière */
 /* actioni est une action lorsque le lexème correspond à mi*/
