@@ -5,37 +5,41 @@ int var[26];
 void yyerror(char *s);
 %}
 
-%token tINT tCONST tNB tID tADD tMIN tMUL tDIV tEQU tSEM tPAROPEN
+%union { int nb ; char str[16]; }
+%token tINT tCONST tADD tMIN tMUL tDIV tEQU tSEM tPAROPEN
 %token tPARCLOSE tBRAOPEN tBRACLOSE tMAIN tRETURN tIF tELSE tWHILE
-%token tSPACE tCOMMA tTAB tBREAK tQUOTE tSUICIDE
+%token tSPACE tCOMMA tTAB tBREAK tQUOTE tPRINTF
+%token <nb> tNB
+%token <str> tID
+
+%left tADD tMIN
+%left tMUL tDIV
+
 %start Programme
 %%
 
 Programme : Funs;
 Funs : Fun | Fun Funs ;
-Fun : tINT tID tPAROPEN Vars tPARCLOSE RetourLigne tBRAOPEN RetourLigne Content tBRACLOSE
-RetourLigne : tBREAK | tBREAK RetourLigne | ;
+Fun : tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE;
 
-Espace : Espace " " | Espace | ;
+Vars : | tINT tID VarsNext ;
 
-Opp : Add|Adds
-
-Vars : tINT tID | tINT tID Vars | ;
-Content : 
+VarsNext : | tCOMMA tINT tID VarsNext ;
 
 
-tINT tID tSEM
-    {mem[$2]=$3;}
-
-Operations : Affectation Operation;
-Valeur : Operation | tNB;
-Affectation : tID tEQU Valeur {6 $1 $3}
-
-Operation : Operande Valeur Operation | Operande Valeur;
-Operande : tADD | tMUL | tDIV | tMIN;
-
-Valeur : tNB | tID;
+Content : Affectation Content | ;
+Affectation : tID tEQU Valeur tSEM ;
+Valeur : Valeur tADD Valeur
+| Valeur tMUL Valeur
+| tNB
+| tID
+| tPAROPEN Valeur tPARCLOSE ;
 
 
-tPRINTF tSEM
-    {print }
+%%
+
+
+void yyerror(char *s) {
+    fprintf(stderr, "%s", s);
+    exit(1);
+}

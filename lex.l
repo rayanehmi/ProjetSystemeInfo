@@ -2,12 +2,14 @@
 /* Déclaration des variables */
 /* et des symboles appelés constantes littérales */
 /* #include... */
+#include "y.tab.h"
 %}
+
+%option noyywrap
 /* Déclarations des classes et des expressions régulières */
 
 %%
 
-main {printf("Main detecte");}
 printf {return tPRINTF;}
 return {return tRETURN;}
 if {return tIF;}
@@ -16,8 +18,14 @@ while {return tWHILE;}
 
 int {return tINT;}
 const {return tCONST;}
-[0-9]+ {return tNB;}
-[A-z]([A-z]|_|[0-9])* {return tID;}
+[0-9]+ {
+    yylval.nb = (int) strtold(yytext, NULL);
+    return tNB;
+    }
+[A-z]([A-z]|_|[0-9])* {
+    strcpy(yylval.str, yytext);
+    return tID;
+    }
 
 "+" {return tADD;}
 "-" {return tMIN;}
@@ -30,12 +38,9 @@ const {return tCONST;}
 ")" {return tPARCLOSE;}
 "{" {return tBRAOPEN;}
 "}" {return tBRACLOSE;}
-" " {return tSPACE;}
 "," {return tCOMMA;}
-"\t" {return tTAB;}
-"\n" {return tBREAK;}
 "\"" {return tQUOTE;}
-[ \t]+ {return ;} /* big coup de genie de paul */
+[ \t\n]+  {} /* big coup de genie de paul */
 %%
 /* mi est une expression régulière */
 /* actioni est une action lorsque le lexème correspond à mi*/

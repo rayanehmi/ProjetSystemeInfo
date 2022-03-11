@@ -1,0 +1,419 @@
+Terminaux inutilisés dans la grammaire
+
+    tCONST
+    tMIN
+    tDIV
+    tMAIN
+    tRETURN
+    tIF
+    tELSE
+    tWHILE
+    tSPACE
+    tTAB
+    tBREAK
+    tQUOTE
+    tPRINTF
+
+
+Grammaire
+
+    0 $accept: Programme $end
+
+    1 Programme: Funs
+
+    2 Funs: Fun
+    3     | Fun Funs
+
+    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE
+
+    5 Vars: %empty
+    6     | tINT tID VarsNext
+
+    7 VarsNext: %empty
+    8         | tCOMMA tINT tID VarsNext
+
+    9 Content: Affectation Content
+   10        | %empty
+
+   11 Affectation: tID tEQU Valeur tSEM
+
+   12 Valeur: Valeur tADD Valeur
+   13       | Valeur tMUL Valeur
+   14       | tNB
+   15       | tID
+   16       | tPAROPEN Valeur tPARCLOSE
+
+
+Terminaux, suivis des règles où ils apparaissent
+
+    $end (0) 0
+    error (256)
+    tINT (258) 4 6 8
+    tCONST (259)
+    tADD (260) 12
+    tMIN (261)
+    tMUL (262) 13
+    tDIV (263)
+    tEQU (264) 11
+    tSEM (265) 11
+    tPAROPEN (266) 4 16
+    tPARCLOSE (267) 4 16
+    tBRAOPEN (268) 4
+    tBRACLOSE (269) 4
+    tMAIN (270)
+    tRETURN (271)
+    tIF (272)
+    tELSE (273)
+    tWHILE (274)
+    tSPACE (275)
+    tCOMMA (276) 8
+    tTAB (277)
+    tBREAK (278)
+    tQUOTE (279)
+    tPRINTF (280)
+    tNB <nb> (281) 14
+    tID <str> (282) 4 6 8 11 15
+
+
+Non-terminaux, suivis des règles où ils apparaissent
+
+    $accept (28)
+        à gauche: 0
+    Programme (29)
+        à gauche: 1
+        à droite: 0
+    Funs (30)
+        à gauche: 2 3
+        à droite: 1 3
+    Fun (31)
+        à gauche: 4
+        à droite: 2 3
+    Vars (32)
+        à gauche: 5 6
+        à droite: 4
+    VarsNext (33)
+        à gauche: 7 8
+        à droite: 6 8
+    Content (34)
+        à gauche: 9 10
+        à droite: 4 9
+    Affectation (35)
+        à gauche: 11
+        à droite: 9
+    Valeur (36)
+        à gauche: 12 13 14 15 16
+        à droite: 11 12 13 16
+
+
+État 0
+
+    0 $accept: . Programme $end
+
+    tINT  décalage et aller à l'état 1
+
+    Programme  aller à l'état 2
+    Funs       aller à l'état 3
+    Fun        aller à l'état 4
+
+
+État 1
+
+    4 Fun: tINT . tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE
+
+    tID  décalage et aller à l'état 5
+
+
+État 2
+
+    0 $accept: Programme . $end
+
+    $end  décalage et aller à l'état 6
+
+
+État 3
+
+    1 Programme: Funs .
+
+    $défaut  réduction par utilisation de la règle 1 (Programme)
+
+
+État 4
+
+    2 Funs: Fun .
+    3     | Fun . Funs
+
+    tINT  décalage et aller à l'état 1
+
+    $défaut  réduction par utilisation de la règle 2 (Funs)
+
+    Funs  aller à l'état 7
+    Fun   aller à l'état 4
+
+
+État 5
+
+    4 Fun: tINT tID . tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE
+
+    tPAROPEN  décalage et aller à l'état 8
+
+
+État 6
+
+    0 $accept: Programme $end .
+
+    $défaut  accepter
+
+
+État 7
+
+    3 Funs: Fun Funs .
+
+    $défaut  réduction par utilisation de la règle 3 (Funs)
+
+
+État 8
+
+    4 Fun: tINT tID tPAROPEN . Vars tPARCLOSE tBRAOPEN Content tBRACLOSE
+
+    tINT  décalage et aller à l'état 9
+
+    $défaut  réduction par utilisation de la règle 5 (Vars)
+
+    Vars  aller à l'état 10
+
+
+État 9
+
+    6 Vars: tINT . tID VarsNext
+
+    tID  décalage et aller à l'état 11
+
+
+État 10
+
+    4 Fun: tINT tID tPAROPEN Vars . tPARCLOSE tBRAOPEN Content tBRACLOSE
+
+    tPARCLOSE  décalage et aller à l'état 12
+
+
+État 11
+
+    6 Vars: tINT tID . VarsNext
+
+    tCOMMA  décalage et aller à l'état 13
+
+    $défaut  réduction par utilisation de la règle 7 (VarsNext)
+
+    VarsNext  aller à l'état 14
+
+
+État 12
+
+    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE . tBRAOPEN Content tBRACLOSE
+
+    tBRAOPEN  décalage et aller à l'état 15
+
+
+État 13
+
+    8 VarsNext: tCOMMA . tINT tID VarsNext
+
+    tINT  décalage et aller à l'état 16
+
+
+État 14
+
+    6 Vars: tINT tID VarsNext .
+
+    $défaut  réduction par utilisation de la règle 6 (Vars)
+
+
+État 15
+
+    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN . Content tBRACLOSE
+
+    tID  décalage et aller à l'état 17
+
+    $défaut  réduction par utilisation de la règle 10 (Content)
+
+    Content      aller à l'état 18
+    Affectation  aller à l'état 19
+
+
+État 16
+
+    8 VarsNext: tCOMMA tINT . tID VarsNext
+
+    tID  décalage et aller à l'état 20
+
+
+État 17
+
+   11 Affectation: tID . tEQU Valeur tSEM
+
+    tEQU  décalage et aller à l'état 21
+
+
+État 18
+
+    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content . tBRACLOSE
+
+    tBRACLOSE  décalage et aller à l'état 22
+
+
+État 19
+
+    9 Content: Affectation . Content
+
+    tID  décalage et aller à l'état 17
+
+    $défaut  réduction par utilisation de la règle 10 (Content)
+
+    Content      aller à l'état 23
+    Affectation  aller à l'état 19
+
+
+État 20
+
+    8 VarsNext: tCOMMA tINT tID . VarsNext
+
+    tCOMMA  décalage et aller à l'état 13
+
+    $défaut  réduction par utilisation de la règle 7 (VarsNext)
+
+    VarsNext  aller à l'état 24
+
+
+État 21
+
+   11 Affectation: tID tEQU . Valeur tSEM
+
+    tPAROPEN  décalage et aller à l'état 25
+    tNB       décalage et aller à l'état 26
+    tID       décalage et aller à l'état 27
+
+    Valeur  aller à l'état 28
+
+
+État 22
+
+    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE .
+
+    $défaut  réduction par utilisation de la règle 4 (Fun)
+
+
+État 23
+
+    9 Content: Affectation Content .
+
+    $défaut  réduction par utilisation de la règle 9 (Content)
+
+
+État 24
+
+    8 VarsNext: tCOMMA tINT tID VarsNext .
+
+    $défaut  réduction par utilisation de la règle 8 (VarsNext)
+
+
+État 25
+
+   16 Valeur: tPAROPEN . Valeur tPARCLOSE
+
+    tPAROPEN  décalage et aller à l'état 25
+    tNB       décalage et aller à l'état 26
+    tID       décalage et aller à l'état 27
+
+    Valeur  aller à l'état 29
+
+
+État 26
+
+   14 Valeur: tNB .
+
+    $défaut  réduction par utilisation de la règle 14 (Valeur)
+
+
+État 27
+
+   15 Valeur: tID .
+
+    $défaut  réduction par utilisation de la règle 15 (Valeur)
+
+
+État 28
+
+   11 Affectation: tID tEQU Valeur . tSEM
+   12 Valeur: Valeur . tADD Valeur
+   13       | Valeur . tMUL Valeur
+
+    tADD  décalage et aller à l'état 30
+    tMUL  décalage et aller à l'état 31
+    tSEM  décalage et aller à l'état 32
+
+
+État 29
+
+   12 Valeur: Valeur . tADD Valeur
+   13       | Valeur . tMUL Valeur
+   16       | tPAROPEN Valeur . tPARCLOSE
+
+    tADD       décalage et aller à l'état 30
+    tMUL       décalage et aller à l'état 31
+    tPARCLOSE  décalage et aller à l'état 33
+
+
+État 30
+
+   12 Valeur: Valeur tADD . Valeur
+
+    tPAROPEN  décalage et aller à l'état 25
+    tNB       décalage et aller à l'état 26
+    tID       décalage et aller à l'état 27
+
+    Valeur  aller à l'état 34
+
+
+État 31
+
+   13 Valeur: Valeur tMUL . Valeur
+
+    tPAROPEN  décalage et aller à l'état 25
+    tNB       décalage et aller à l'état 26
+    tID       décalage et aller à l'état 27
+
+    Valeur  aller à l'état 35
+
+
+État 32
+
+   11 Affectation: tID tEQU Valeur tSEM .
+
+    $défaut  réduction par utilisation de la règle 11 (Affectation)
+
+
+État 33
+
+   16 Valeur: tPAROPEN Valeur tPARCLOSE .
+
+    $défaut  réduction par utilisation de la règle 16 (Valeur)
+
+
+État 34
+
+   12 Valeur: Valeur . tADD Valeur
+   12       | Valeur tADD Valeur .
+   13       | Valeur . tMUL Valeur
+
+    tMUL  décalage et aller à l'état 31
+
+    $défaut  réduction par utilisation de la règle 12 (Valeur)
+
+
+État 35
+
+   12 Valeur: Valeur . tADD Valeur
+   13       | Valeur . tMUL Valeur
+   13       | Valeur tMUL Valeur .
+
+    $défaut  réduction par utilisation de la règle 13 (Valeur)
