@@ -6,9 +6,9 @@ void yyerror(char *s);
 %}
 
 %union { int nb ; char str[16]; }
-%token tINT tCONST tADD tMIN tMUL tDIV tEQU tSEM tPAROPEN
+%token tINT tCONST tADD tMIN tMUL tDIV tEQU tSEM tPAROPEN tEXP
 %token tPARCLOSE tBRAOPEN tBRACLOSE tMAIN tRETURN tIF tELSE tWHILE
-%token tSPACE tCOMMA tTAB tBREAK tQUOTE tPRINTF
+%token tSPACE tCOMMA tTAB tBREAK tQUOTE tPRINTF tSUP tINF
 %token <nb> tNB
 %token <str> tID
 
@@ -18,23 +18,65 @@ void yyerror(char *s);
 %start Programme
 %%
 
-Programme : Funs;
-Funs : Fun | Fun Funs ;
-Fun : tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE;
+    /* Programme & Fonctions & Variables */
 
-Vars : | tINT tID VarsNext ;
+Programme: Funs;
+Funs: Fun | Fun Funs ;
+Fun: 
+  tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tBRACLOSE
+| tINT tID tPAROPEN Vars tPARCLOSE tBRAOPEN Content tRETURN Valeur tBRACLOSE;
 
-VarsNext : | tCOMMA tINT tID VarsNext ;
+Vars: | tINT tID VarsNext ;
 
+VarsNext: | tCOMMA tINT tID VarsNext ;
 
-Content : Affectation Content | ;
-Affectation : tID tEQU Valeur tSEM ;
-Valeur : Valeur tADD Valeur
+    /* Lignes */
+
+Content: 
+  Affectation Content 
+| tINT Affectation Content 
+| Printf Content
+| Condition 
+| ConditionWhile
+| ;
+
+Affectation: tID tEQU Valeur tSEM ;
+
+    /* Valeur & Calculs */
+
+Valeur: 
+  Valeur tADD Valeur
+| Valeur tEXP Valeur
+| Valeur tMIN Valeur
+| Valeur tDIV Valeur
 | Valeur tMUL Valeur
 | tNB
 | tID
 | tPAROPEN Valeur tPARCLOSE ;
 
+    /* Printf */
+
+Printf: 
+  tPRINTF tPAROPEN tID tPARCLOSE tSEM  
+| tPRINTF tPAROPEN tQUOTE tQUOTE tPARCLOSE tSEM;
+
+    /* If & Else */
+
+Condition: 
+  tIF tPAROPEN Expression tPARCLOSE tBRAOPEN Content tBRACLOSE Else Content;
+
+Else: | 
+  tELSE tBRAOPEN Content tBRACLOSE;
+
+Expression: Valeur Comparaison Valeur | Valeur;
+
+Comparaison: tINF | tSUP | tINF tEQU | tSUP tEQU | tEQU tEQU;
+
+    /* While */
+
+ConditionWhile: 
+  tWHILE tPAROPEN Expression tPARCLOSE tBRAOPEN Content tBRACLOSE Content
+| tWHILE tPAROPEN Expression tPARCLOSE tSEM Content;
 
 %%
 

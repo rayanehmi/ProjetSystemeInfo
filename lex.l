@@ -18,10 +18,11 @@ while {return tWHILE;}
 
 int {return tINT;}
 const {return tCONST;}
-[0-9]+ {
+[0-9]+(e[0-9]+)? {
     yylval.nb = (int) strtold(yytext, NULL);
     return tNB;
     }
+    
 [A-z]([A-z]|_|[0-9])* {
     strcpy(yylval.str, yytext);
     return tID;
@@ -32,6 +33,8 @@ const {return tCONST;}
 "*" {return tMUL;}
 "/" {return tDIV;}
 "=" {return tEQU;}
+">" {return tSUP;}
+"<" {return tINF;}
 
 ";" {return tSEM;}
 "(" {return tPAROPEN;}
