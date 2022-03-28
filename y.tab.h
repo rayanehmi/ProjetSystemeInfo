@@ -58,25 +58,21 @@ extern int yydebug;
     tEQU = 264,
     tSEM = 265,
     tPAROPEN = 266,
-    tEXP = 267,
-    tPARCLOSE = 268,
-    tBRAOPEN = 269,
-    tBRACLOSE = 270,
-    tMAIN = 271,
-    tRETURN = 272,
-    tIF = 273,
-    tELSE = 274,
-    tWHILE = 275,
-    tSPACE = 276,
-    tCOMMA = 277,
-    tTAB = 278,
-    tBREAK = 279,
-    tQUOTE = 280,
-    tPRINTF = 281,
-    tSUP = 282,
-    tINF = 283,
-    tNB = 284,
-    tID = 285
+    tPARCLOSE = 267,
+    tBRAOPEN = 268,
+    tBRACLOSE = 269,
+    tMAIN = 270,
+    tRETURN = 271,
+    tIF = 272,
+    tELSE = 273,
+    tWHILE = 274,
+    tCOMMA = 275,
+    tQUOTE = 276,
+    tPRINTF = 277,
+    tSUP = 278,
+    tINF = 279,
+    tNB = 280,
+    tID = 281
   };
 #endif
 /* Tokens.  */
@@ -89,34 +85,30 @@ extern int yydebug;
 #define tEQU 264
 #define tSEM 265
 #define tPAROPEN 266
-#define tEXP 267
-#define tPARCLOSE 268
-#define tBRAOPEN 269
-#define tBRACLOSE 270
-#define tMAIN 271
-#define tRETURN 272
-#define tIF 273
-#define tELSE 274
-#define tWHILE 275
-#define tSPACE 276
-#define tCOMMA 277
-#define tTAB 278
-#define tBREAK 279
-#define tQUOTE 280
-#define tPRINTF 281
-#define tSUP 282
-#define tINF 283
-#define tNB 284
-#define tID 285
+#define tPARCLOSE 267
+#define tBRAOPEN 268
+#define tBRACLOSE 269
+#define tMAIN 270
+#define tRETURN 271
+#define tIF 272
+#define tELSE 273
+#define tWHILE 274
+#define tCOMMA 275
+#define tQUOTE 276
+#define tPRINTF 277
+#define tSUP 278
+#define tINF 279
+#define tNB 280
+#define tID 281
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED
 union YYSTYPE
 {
-#line 8 "yacc.y"
+#line 11 "yacc.y"
  int nb ; char str[16]; 
 
-#line 120 "y.tab.h"
+#line 112 "y.tab.h"
 
 };
 typedef union YYSTYPE YYSTYPE;

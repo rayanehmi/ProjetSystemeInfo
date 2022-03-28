@@ -11,3 +11,13 @@ void decrDepth();
 int getAddr(char id[5]);
 
 void freeVar();
+
+int addTmp();
+
+int avant_derniere();
+
+int derniere();
+
+int getLastVal();
+
+int getBeforeLastVal();

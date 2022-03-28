@@ -23,7 +23,7 @@ const {return tCONST;}
     return tNB;
     }
     
-[A-z]([A-z]|_|[0-9])* {
+[a-zA-Z]([a-zA-Z]|_|[0-9])* {
     strcpy(yylval.str, yytext);
     return tID;
     }

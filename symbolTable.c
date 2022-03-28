@@ -26,29 +26,30 @@ void print_ts(){
     for (int i = 0; i<(indexTable); i++){
         printf("name : %s\t",ST[i].name);
         printf("address : %d\t",ST[i].addr);
-        printf("type : %s\n",ST[i].type);
-        printf("value : %d\t",ST[i].value);
-        printf("depth : %d\n\n",ST[i].depth);
+        printf("type : %s\t",ST[i].type);
+        printf("depth : %d\n",ST[i].depth);
     }
 }
 
 void add_symbol(char name[5], char type[5]){
+
+    // si la var existe 
     ligneTab newLine;
     strcpy(newLine.name, name);
     strcpy(newLine.type, type);
-    newLine.value = 0;
     newLine.depth = depthTable;
     newLine.addr = indexTable;
     ST[indexTable] = newLine;
     indexTable ++;
-    printf("%d",indexTable);
+    
+    
+    //printf("%d",indexTable);
 }
 
 void incrDepth(){
     depthTable++;
 }
 
-// DEFINIR BLOC DANS YACC { CONTENT }
 
 void decrDepth(){
     int i=indexTable;
@@ -60,21 +61,47 @@ void decrDepth(){
 }
 
 int getAddr(char id[5]){
+    printf("getAddr %s\n", id);
+    print_ts();
+    printf("===\n");
     int i = 0;
-    while((i<=indexTable) && !(strcmp(ST[i].name,id))){
+    while((i<indexTable) && strcmp(ST[i].name,id)){
         i++;
     }
-    if (i > indexTable){
-        printf("ID Not found \t");
+    printf("i: %d\n", i);
+    if (i >= indexTable){
+        //printf("ID Not found \t");
+
         return(-1);
     }
-    else{return(i-1);}
+    else{return(i);}
 }
+
+int addTmp(){
+    indexTable++;
+    return indexTable-1;
+} 
 
 void freeVar(){
     indexTable--;
 } 
 
+int avant_derniere(){
+    return (indexTable-2);
+}
+
+int derniere(){
+    return (indexTable-1);
+}
+
+int getLastVal(){
+    return(ST[indexTable].value);
+}
+
+int getBeforeLastVal(){
+    return(ST[indexTable - 1].value);
+}
+/*
 int main() {
     add_symbol("a","int");
     incrDepth();
@@ -89,3 +116,4 @@ int main() {
     printf("a = %d\n",a);
 }
 
+*/
