@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../microcontroleur.srcs/sources_1/new/UAL.vhd" \
+"../../../../microcontroleur.srcs/sources_1/new/Test_UAL.vhd" \
+
+# Do not sort compile order
+nosort
