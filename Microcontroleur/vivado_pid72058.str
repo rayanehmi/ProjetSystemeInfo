@@ -1,0 +1,281 @@
+/*
+
+Xilinx Vivado v2018.2 (64-bit) [Major: 2018, Minor: 2]
+SW Build: 2258646 on Thu Jun 14 20:02:38 MDT 2018
+IP Build: 2256618 on Thu Jun 14 22:10:49 MDT 2018
+
+Process ID: 72058
+License: Customer
+
+Current time: 	Thu May 19 10:42:47 CEST 2022
+Time zone: 	Central European Time (Europe/Paris)
+
+OS: Ubuntu
+OS Version: 5.13.0-41-generic
+OS Architecture: amd64
+Available processors (cores): 64
+
+Display: :11.0
+Screen size: 1536x738
+Screen resolution (DPI): 96
+Available screens: 1
+Available disk space: 358 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	1.8.0_112 64-bit
+Java home: 	/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/tps/lnx64/jre
+Java executable location: 	/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/tps/lnx64/jre/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 2 GB
+
+
+User name: 	rhachemi
+User home directory: /home/rhachemi
+User working directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur
+User country: 	FR
+User language: 	fr
+User locale: 	fr_FR
+
+RDI_BASEROOT: /usr/local/insa/Xilinx.VIVADO/Vivado
+HDI_APPROOT: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2
+RDI_DATADIR: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/data
+RDI_BINDIR: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin
+
+Vivado preferences file location: /home/rhachemi/.Xilinx/Vivado/2018.2/vivado.xml
+Vivado preferences directory: /home/rhachemi/.Xilinx/Vivado/2018.2/
+Vivado layouts directory: /home/rhachemi/.Xilinx/Vivado/2018.2/layouts
+PlanAhead jar file location: 	/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/lib/classes/planAhead.jar
+Vivado log file location: 	/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.log
+Vivado journal file location: 	/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-72058-srv-tp04
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/ids_lite/ISE
+XILINXD_LICENSE_FILE: /usr/local/insa/Xilinx.VIVADO/Xilinx.lic
+XILINX_DSP: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/ids_lite/ISE
+XILINX_PLANAHEAD: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2
+XILINX_SDK: /usr/local/insa/Xilinx.VIVADO/SDK/2018.2
+XILINX_VIVADO: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2
+XILINX_VIVADO_HLS: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2
+
+
+GUI allocated memory:	178 MB
+GUI max memory:		3,052 MB
+Engine allocated memory: 1,061 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// [GUI Memory]: 62 MB (+62956kb) [00:00:11]
+// [Engine Memory]: 1,055 MB (+954575kb) [00:00:11]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,061 MB. GUI used memory: 40 MB. Current time: 5/19/22 10:42:50 AM CEST
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr", 0); // q (O, ck)
+// bx (ck):  Open Project : addNotify
+// Opening Vivado Project: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr. Version: Vivado v2018.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_NEW
+// HMemoryUtils.trashcanNow. Engine heap size: 1,123 MB. GUI used memory: 38 MB. Current time: 5/19/22 10:43:30 AM CEST
+// [Engine Memory]: 1,127 MB (+20267kb) [00:00:57]
+// Tcl Message: open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/data/ip'. 
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,198 MB (+15946kb) [00:01:00]
+// Project name: microcontroleur; location: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur; part: xc7a35tcpg236-1
+// Tcl Message: open_project: Time (s): cpu = 00:00:23 ; elapsed = 00:00:10 . Memory (MB): peak = 6338.230 ; gain = 135.484 ; free physical = 115506 ; free virtual = 131464 
+// Elapsed time: 10 seconds
+dismissDialog("Open Project"); // bx (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [GUI Memory]: 66 MB (+53kb) [00:01:05]
+// TclEventType: DG_GRAPH_GENERATED
+// Tcl Message: update_compile_order -fileset sources_1 
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs synth_1 -jobs 12 
+// TclEventType: RUN_MODIFY
+// Tcl Message: [Thu May 19 10:44:14 2022] Launched synth_1... Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log 
+// [Engine Memory]: 1,262 MB (+4255kb) [00:01:41]
+// Elapsed time: 37 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// HMemoryUtils.trashcanNow. Engine heap size: 1,263 MB. GUI used memory: 41 MB. Current time: 5/19/22 10:44:21 AM CEST
+// 'k' command handler elapsed time: 4 seconds
+selectButton("PAResourceQtoS.RunRun_TASK_ALREADY_RUNNING_WOULD_YOU_LIKE_Cancel", "Cancel"); // JButton (A, G)
+// [GUI Memory]: 71 MB (+1854kb) [00:01:50]
+// TclEventType: RUN_FAILED
+// ah (ck): Synthesis Failed: addNotify
+// Elapsed time: 15 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 81 MB (+6653kb) [00:02:16]
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 12 
+// Tcl Message: [Thu May 19 10:44:50 2022] Launched synth_1... Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log 
+// Elapsed time: 13 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,300 MB. GUI used memory: 41 MB. Current time: 5/19/22 10:44:55 AM CEST
+// TclEventType: RUN_COMPLETED
+// ah (ck): Synthesis Completed: addNotify
+// Elapsed time: 81 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (ck)
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files]", 1); // B (D, ck)
+// PAPropertyPanels.initPanels (BMI.vhd) elapsed time: 0.2s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, Syntax Error Files, BMI.vhd]", 2, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BR(Behavioral) (BR.vhd)]", 6, false); // B (D, ck)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, BR(Behavioral) (BR.vhd)]", 6, false, false, false, false, false, true); // B (D, ck) - Double Click
+// [GUI Memory]: 85 MB (+74kb) [00:03:51]
+// [GUI Memory]: 97 MB (+8711kb) [00:03:51]
+// [GUI Memory]: 103 MB (+1013kb) [00:04:28]
+// Elapsed time: 62 seconds
+selectButton(PAResourceCommand.PACommandNames_ADD_SOURCES, "Sources_add_sources"); // B (f, ck)
+// Run Command: PAResourceCommand.PACommandNames_ADD_SOURCES
+// c (ck): Add Sources: addNotify
+selectRadioButton(PAResourceAtoD.AddSrcWizard_SPECIFY_SIMULATION_SPECIFIC_HDL_FILES, "Add or create simulation sources"); // a (o, c)
+selectButton("NEXT", "Next >"); // JButton (j, c)
+selectButton(PAResourceQtoS.SrcChooserPanel_CREATE_FILE, "Create File"); // a (C, c)
+// F (c): Create Source File: addNotify
+selectComboBox(PAResourceAtoD.CreateSrcFileDialog_FILE_TYPE, "VHDL", 3); // cl (Q, F)
+setText(PAResourceAtoD.CreateSrcFileDialog_FILE_NAME, "Test_BR"); // X (Q, F)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (F)
+// Tcl Command: 'file mkdir /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new'
+dismissDialog("Create Source File"); // F (c)
+// Tcl Message: file mkdir /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new 
+selectTable(PAResourceQtoS.SrcChooserTable_SRC_CHOOSER_TABLE, "VSourceFile ; 1 ; Test_BR.vhd ; xil_defaultlib ; <Local to Project>", 0, "<Local to Project>", 4); // bP (O, c)
+selectButton("FINISH", "Finish"); // JButton (j, c)
+// 'h' command handler elapsed time: 34 seconds
+dismissDialog("Add Sources"); // c (ck)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_OPTIONS_CHANGE
+// Tcl Message: set_property SOURCE_SET sources_1 [get_filesets sim_1] 
+// Tcl Message: close [ open /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_BR.vhd w ] 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: add_files -fileset sim_1 /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_BR.vhd 
+// I (ck): Define Module: addNotify
+// [GUI Memory]: 110 MB (+1565kb) [00:05:51]
+// [GUI Memory]: 121 MB (+6140kb) [00:06:01]
+// [GUI Memory]: 129 MB (+2071kb) [00:06:31]
+// [GUI Memory]: 137 MB (+1112kb) [00:06:46]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,401 MB. GUI used memory: 48 MB. Current time: 5/19/22 10:49:32 AM CEST
+// [Engine Memory]: 1,401 MB (+79473kb) [00:06:58]
+// Elapsed time: 250 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_No", "No"); // JButton (A, H)
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (I)
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceAtoD.DefineModulesDialog_YOU_HAVE_MADE_CHANGES_TO_MODULE_Yes", "Yes"); // JButton (A, H)
+dismissDialog("Define Module"); // I (ck)
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sim_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,419 MB. GUI used memory: 46 MB. Current time: 5/19/22 10:52:35 AM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// [Engine Memory]: 1,476 MB (+4539kb) [00:10:14]
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,484 MB. GUI used memory: 46 MB. Current time: 5/19/22 10:52:50 AM CEST
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (ck):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// bx (ck):  Starting Design Runs : addNotify
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 12 
+// Tcl Message: [Thu May 19 10:53:01 2022] Launched synth_1... Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log 
+// Elapsed time: 35 seconds
+dismissDialog("Starting Design Runs"); // bx (ck)
+selectButton(PAResourceQtoS.SyntheticaStateMonitor_CANCEL, "Cancel"); // h (Q, ck)
+// bx (ck):  Resetting Runs : addNotify
+selectButton("PAResourceQtoS.StateMonitor_OK_TO_CANCEL_YOUR_RUNNING_SYNTHESIS_Cancel Process", "Cancel Process"); // JButton (A, G)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+dismissDialog("Resetting Runs"); // bx (ck)
+selectCodeEditor("BR.vhd", 339, 190); // ce (w, ck)
+// Elapsed time: 16 seconds
+selectCodeEditor("BR.vhd", 111, 318); // ce (w, ck)
+selectCodeEditor("BR.vhd", 121, 313); // ce (w, ck)
+selectCodeEditor("BR.vhd", 513, 353); // ce (w, ck)
+selectCodeEditor("BR.vhd", 87, 311); // ce (w, ck)
+typeControlKey((HResource) null, "BR.vhd", 'c'); // ce (w, ck)
+// Elapsed time: 35 seconds
+selectCodeEditor("BR.vhd", 83, 208); // ce (w, ck)
+selectCodeEditor("BR.vhd", 77, 278); // ce (w, ck)
+selectCodeEditor("BR.vhd", 139, 277); // ce (w, ck)
+// Elapsed time: 568 seconds
+selectCodeEditor("BR.vhd", 335, 197); // ce (w, ck)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED
+// HMemoryUtils.trashcanNow. Engine heap size: 1,503 MB. GUI used memory: 45 MB. Current time: 5/19/22 11:20:55 AM CEST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: update_compile_order -fileset sources_1 
+// TclEventType: DG_ANALYSIS_MSG_RESET
+// TclEventType: DG_GRAPH_GENERATED

@@ -1,24 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1650529085">
-  <File Type="VDS-TIMING-PB" Name="Test_UAL_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Test_UAL_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="Test_UAL.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="Test_UAL_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="Test_UAL_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="Test_UAL_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="Test_UAL.vds"/>
-  <File Type="REPORTS-TCL" Name="Test_UAL_reports.tcl"/>
-  <File Type="PA-TCL" Name="Test_UAL.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1653293577">
+  <File Type="VDS-TIMING-PB" Name="CheminDeDonnees_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="CheminDeDonnees_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="CheminDeDonnees.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="CheminDeDonnees_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="CheminDeDonnees_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="CheminDeDonnees_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="CheminDeDonnees.vds"/>
+  <File Type="REPORTS-TCL" Name="CheminDeDonnees_reports.tcl"/>
+  <File Type="PA-TCL" Name="CheminDeDonnees.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/UAL.vhd">
+    <File Path="$PSRCDIR/sources_1/new/CheminDeDonnees.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/Test_UAL.vhd">
+    <File Path="$PSRCDIR/sources_1/new/BR.vhd">
       <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/MB.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/UAL.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/BMI.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -30,9 +52,15 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/Test_UAL.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="Test_UAL"/>
+      <Option Name="TopModule" Val="CheminDeDonnees"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../microcontroleur.srcs/sources_1/new/MB.vhd" \
+"../../../../microcontroleur.srcs/sim_1/new/Test_BMD.vhd" \
+
+# Do not sort compile order
+nosort

@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log Test_UAL.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Test_UAL.tcl
+EAStep vivado -log CheminDeDonnees.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source CheminDeDonnees.tcl

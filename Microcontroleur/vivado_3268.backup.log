@@ -1,0 +1,30 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu May 19 09:35:37 2022
+# Process ID: 3268
+# Current directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur
+# Command line: vivado
+# Log file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.log
+# Journal file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/data/ip'.
+open_project: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 6153.832 ; gain = 128.203 ; free physical = 12264 ; free virtual = 23083
+update_compile_order -fileset sources_1
+set_property used_in_synthesis false [get_files  /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/Test_UAL.vhd]
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu May 19 11:20:48 2022...
