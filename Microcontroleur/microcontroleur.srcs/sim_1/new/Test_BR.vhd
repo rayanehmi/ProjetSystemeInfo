@@ -85,7 +85,7 @@ Label_uut: BR PORT MAP (
         wait for Clock_period/2;
     end process;
     
-    tA <= "0001" after 0 ns;
+    tA <= "00000001" after 0 ns;
     tB <= "0010" after 0 ns;
     tW <= "0001" after 0 ns;
     tDATA <= "00001110" after 0 ns;

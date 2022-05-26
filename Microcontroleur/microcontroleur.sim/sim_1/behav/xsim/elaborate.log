@@ -1,8 +1,10 @@
 Vivado Simulator 2018.2
 Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
-Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_BMD_behav xil_defaultlib.Test_BMD -log elaborate.log 
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
 Using 8 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:129]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:178]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -11,6 +13,13 @@ Compiling package std.standard
 Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
 Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
-Compiling architecture behavioral of entity xil_defaultlib.test_bmd
-Built simulation snapshot Test_BMD_behav
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav

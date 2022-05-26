@@ -34,20 +34,21 @@ Use IEEE.NUMERIC_STD.ALL;
 entity BMI is
     Port ( Addr : in STD_LOGIC_VECTOR (7 downto 0);
            CLK : in STD_LOGIC;
-           S_OUT : out STD_LOGIC_VECTOR (7 downto 0));
+           S_OUT : out STD_LOGIC_VECTOR (31 downto 0));
 end BMI;
 
 architecture Behavioral of BMI is
 
 
-type memory is array (0 to 31) of std_logic_vector(31 downto 0);
+type memory is array (0 to 511) of std_logic_vector(31 downto 0);
 
 signal s_Mem : memory:= (others => (others => '0'));
 
 begin
-s_mem <= (x"06010200", others=>x"00000000");
+s_mem <= (x"06010200", others=>x"06010200");
 -- Partie mémoire instructions
-S_OUT<=s_Mem(to_integer(unsigned(Addr)));
+S_OUT<=s_Mem(to_integer(unsigned(Addr))); -- a verif
+
 
 
 end Behavioral;

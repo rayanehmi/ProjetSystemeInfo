@@ -33,14 +33,13 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity CheminDeDonnees is
     Port (RST : in STD_LOGIC;
-        CLK : in STD_LOGIC;
+        CLK_CD : in STD_LOGIC;
         C : in STD_LOGIC_VECTOR (7 downto 0);
         OP : in STD_LOGIC_VECTOR (7 downto 0);
         B : in STD_LOGIC_VECTOR (7 downto 0);
         S_W : in STD_LOGIC;
         S_W2 : out STD_LOGIC;
-        A : in STD_LOGIC_VECTOR (7 downto 0)
-           );
+        A : in STD_LOGIC_VECTOR (7 downto 0));
 end CheminDeDonnees;
 
 architecture Behavioral of CheminDeDonnees is
@@ -51,14 +50,14 @@ signal IP : STD_LOGIC_VECTOR (7 downto 0):="00000000";
 COMPONENT BMI
 Port ( Addr : in STD_LOGIC_VECTOR (7 downto 0);
            CLK : in STD_LOGIC;
-           S_OUT : out STD_LOGIC_VECTOR (7 downto 0));
+           S_OUT : out STD_LOGIC_VECTOR (31 downto 0));
 END COMPONENT;
 
 --BR
 COMPONENT BR
-Port ( A : in STD_LOGIC_VECTOR (3 downto 0);
-           B : in STD_LOGIC_VECTOR (3 downto 0);
-           W : in STD_LOGIC_VECTOR (3 downto 0);
+Port ( A : in STD_LOGIC_VECTOR (7 downto 0);
+           B : in STD_LOGIC_VECTOR (7 downto 0);
+           W : in STD_LOGIC_VECTOR (7 downto 0);
            Wlogic : in STD_LOGIC;
            DATA : in STD_LOGIC_VECTOR (7 downto 0);
            RST : in STD_LOGIC;
@@ -91,29 +90,29 @@ PORT(
    S : out STD_LOGIC_VECTOR (7 downto 0));
 END COMPONENT;
 
+signal a_lidi : STD_LOGIC_VECTOR(7 downto 0);
+signal a_diex : STD_LOGIC_VECTOR(7 downto 0);
+signal a_exmem : STD_LOGIC_VECTOR(7 downto 0);
+signal a_memre : STD_LOGIC_VECTOR(7 downto 0);
+
 signal b_lidi : STD_LOGIC_VECTOR(7 downto 0);
 signal b_diex : STD_LOGIC_VECTOR(7 downto 0);
 signal b_exmem : STD_LOGIC_VECTOR(7 downto 0);
 signal b_memre : STD_LOGIC_VECTOR(7 downto 0);
 
-signal a_lidi : STD_LOGIC_VECTOR(3 downto 0);
-signal a_diex : STD_LOGIC_VECTOR(3 downto 0);
-signal a_exmem : STD_LOGIC_VECTOR(3 downto 0);
-signal a_memre : STD_LOGIC_VECTOR(3 downto 0);
+signal c_lidi : STD_LOGIC_VECTOR(7 downto 0);
+signal c_diex : STD_LOGIC_VECTOR(7 downto 0);
+signal c_exmem : STD_LOGIC_VECTOR(7 downto 0);
+signal c_memre : STD_LOGIC_VECTOR(7 downto 0);
 
-signal c_lidi : STD_LOGIC_VECTOR(3 downto 0);
-signal c_diex : STD_LOGIC_VECTOR(3 downto 0);
-signal c_exmem : STD_LOGIC_VECTOR(3 downto 0);
-signal c_memre : STD_LOGIC_VECTOR(3 downto 0);
-
-signal op_lidi : STD_LOGIC_VECTOR(3 downto 0);
-signal op_diex : STD_LOGIC_VECTOR(3 downto 0);
-signal op_exmem : STD_LOGIC_VECTOR(3 downto 0);
-signal op_memre : STD_LOGIC_VECTOR(3 downto 0);
+signal op_lidi : STD_LOGIC_VECTOR(7 downto 0);
+signal op_diex : STD_LOGIC_VECTOR(7 downto 0);
+signal op_exmem : STD_LOGIC_VECTOR(7 downto 0);
+signal op_memre : STD_LOGIC_VECTOR(7 downto 0);
 
 signal LC_converter : STD_LOGIC;
 signal reset : STD_LOGIC;
-signal clock : STD_LOGIC;
+--signal clock : STD_LOGIC;
 signal MUX_converter : STD_LOGIC_VECTOR(7 downto 0);
 
 signal LC_Ctrl_Alu : STD_LOGIC_VECTOR(7 downto 0);
@@ -123,7 +122,7 @@ signal Neg : STD_LOGIC;
 signal Overflow : STD_LOGIC;
 
 -- BMI
-signal lecture_bmi : STD_LOGIC_VECTOR(4 downto 0);
+signal lecture_bmi : STD_LOGIC_VECTOR(31 downto 0);
 
 begin
 
@@ -136,7 +135,7 @@ Label_br: BR PORT MAP (
     DATA => b_memre,
     Wlogic => LC_converter, --verif
     RST => reset,
-    CLK => clock,
+    CLK => CLK_CD,
     QA => MUX_converter, --verif
     QB => c_diex
     );
@@ -156,58 +155,58 @@ Label_bmd: BMD PORT MAP (
     S_IN => b_exmem,
     RW => LC_converter, --verif
     RST => reset, --verif
-    CLK => clock, --verif
+    CLK => CLK_CD, --verif
     S_OUT => b_memre
     );    
     
 Label_bmi: BMI PORT MAP (
     Addr => IP,
-    CLK => clock,
+    CLK => CLK_CD,
     S_OUT => lecture_bmi
     );
 
-process(CLK)
+process(CLK_CD)
 
 begin
-if rising_edge(CLK) then
+if rising_edge(CLK_CD) then
    
--- lire le tableau d'instruction
-    op_lidi <= lecture_bmi (27 downto 24);
-    a_lidi <= lecture_bmi (19 downto 16);
-    b_lidi <= lecture_bmi (11 downto 8);
-    c_lidi <= lecture_bmi (3 downto 0);
-   
-    
 
+-- Deuxieme passage par le banc de registre pour ecriture
+    --rien a faire car deja fait
     
--- recuperer les valeurs dans le banc de registre 
-    a_diex <= a_lidi;
-    op_diex <= op_lidi;
-    b_diex <= b_lidi;
+-- Logique combinatoire ppour savoir si on écrit    
+    if op_exmem=x"6" then --or ... 
+        LC_converter <= '1'; --ecriture
+    else
+        LC_converter <= '1';
+    end if;
     
--- On fait le calcul
-    -- pour l'instant pas d'op
-    
--- On envoie la valeur dans le tableau de données
-    a_exmem <= a_diex;
-    op_exmem <= op_diex;
-    b_exmem <= b_diex;
-
 -- je sais pas
     a_memre <= a_exmem;
     op_memre <= op_exmem;
     b_memre <= b_exmem;
     
--- Logique combinatoire ppour savoir si on écrit    
-    if op_exmem="0110" then --or ... 
-        LC_converter <= '1'; --ecriture
-    else
-        LC_converter <= '0';
-    end if;
+-- On envoie la valeur dans le tableau de données
+    a_exmem <= a_diex;
+    op_exmem <= op_diex;
+    b_exmem <= b_diex;
     
--- Deuxieme passage par le banc de registre pour ecriture
-    --rien a faire car deja fait
-    
+-- On fait le calcul
+        -- pour l'instant pas d'op
+
+-- recuperer les valeurs dans le banc de registre 
+    a_diex <= a_lidi;
+    op_diex <= op_lidi;
+    b_diex <= b_lidi;
+
+-- lire le tableau d'instruction
+    op_lidi <= lecture_bmi (31 downto 24);
+    a_lidi <= lecture_bmi (23 downto 16);
+    b_lidi <= lecture_bmi (15 downto 8);
+    c_lidi <= lecture_bmi (7 downto 0);
+
+-- Passer a l'instruction suivante
+    IP <= std_logic_vector (unsigned(IP) + 1);
 end if; --clock
 
 end process;

@@ -87,3 +87,37 @@ INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo
 INFO: [VRFC 10-307] analyzing entity Test_BMD
 INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_BMD.vhd" into library xil_defaultlib
 INFO: [VRFC 10-307] analyzing entity Test_BMD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BR
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sim_1/new/Test_CD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity Test_CD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMD
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees

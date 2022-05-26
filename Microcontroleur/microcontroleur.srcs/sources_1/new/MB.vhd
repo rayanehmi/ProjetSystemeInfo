@@ -53,7 +53,7 @@ begin
 -- Lecture
 S_OUT<=s_Mem(to_integer(unsigned(Addr)))when RW='0';
 
-process(CLK)
+process(CLK,RW,Addr)
 
 begin
     if rising_edge(CLK) then
