@@ -889,14 +889,16 @@ case 24:
 /* rule 24 can match eol */
 YY_RULE_SETUP
 #line 46 "lex.l"
-{} /* big coup de genie de paul */
+{} 
 	YY_BREAK
+/* commentaires : [//.*\n] {}
+ /* Sert a ignorer les tabulations et les retours ligne */
 case 25:
 YY_RULE_SETUP
-#line 47 "lex.l"
+#line 49 "lex.l"
 ECHO;
 	YY_BREAK
-#line 900 "lex.yy.c"
+#line 902 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1901,9 +1903,6 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 47 "lex.l"
+#line 49 "lex.l"
 
-/* mi est une expression régulière */
-/* actioni est une action lorsque le lexème correspond à mi*/
-/* Procédures auxiliaires en C utiles dans les actions
-et/ou permettant de faire un programme indépendant */
+

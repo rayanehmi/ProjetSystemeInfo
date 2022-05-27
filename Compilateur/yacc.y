@@ -10,9 +10,11 @@ void yyerror(char *s);
 
 %union { int nb ; char str[16]; }
 %token tINT tCONST tADD tMIN tMUL tDIV tEQU tSEM tPAROPEN
-%token tPARCLOSE tBRAOPEN tBRACLOSE tMAIN tRETURN tIF tELSE tWHILE
+%token tPARCLOSE tBRAOPEN tBRACLOSE tMAIN tRETURN tELSE 
 %token tCOMMA tQUOTE tPRINTF tSUP tINF
 %token <nb> tNB
+%token <nb> tIF
+%token <nb> tWHILE
 %token <str> tID
 
 %left tADD tMIN
@@ -44,8 +46,8 @@ Content:
   Affectation Content 
 | Declaration Content 
 | Printf Content
-| Condition 
-| ConditionWhile
+| Condition Content 
+| ConditionWhile Content 
 | ;
 
 Declaration: tINT tID tEQU {add_symbol($2,"int");printf("xxxxxx\n"); print_ts();} Valeur tSEM {
@@ -64,7 +66,7 @@ Affectation: tID tEQU Valeur tSEM {
   /* Valeur & Calculs */
 
 Valeur: 
-  Valeur tADD Valeur {add_arit(ADD, avant_derniere(), avant_derniere(),derniere());} 
+  Valeur tADD Valeur { add_arit(ADD, avant_derniere(), avant_derniere(),derniere());} 
 | Valeur tMIN Valeur  {add_arit(MIN, avant_derniere(), avant_derniere(),derniere());} 
 | Valeur tDIV Valeur {add_arit(DIV, avant_derniere(), avant_derniere(),derniere());}
 | Valeur tMUL Valeur {add_arit(MUL, avant_derniere(), avant_derniere(),derniere());}
@@ -73,7 +75,7 @@ Valeur:
         add_inst3(AFC,derniere(),$1);
       }
 | tID  {int add = addTmp();
-        add_inst3(AFC,add,derniere());
+        add_inst3(AFC,add,getAddr($1));
        }
 | tPAROPEN Valeur tPARCLOSE ;
 
@@ -89,36 +91,47 @@ Printf:
 Condition: 
   tIF tPAROPEN Expression tPARCLOSE 
   {
-    // int ligne = add_inst(JMPF);
-    
+    add_inst2(JMF,derniere());
+    int ligne = get_nb_lignes_asm();
+    $1 = ligne;
   } 
   
   Bloc 
   {
-    // int current = get_nb_lignes_asm();
-  }
-  Else Content {
-    incrDepth();
-      //?
-    decrDepth();
+    int current = get_nb_lignes_asm();
+    patchJMF($1,current+2);
+    add_inst(JMP);
+    int ligne = get_nb_lignes_asm();
+    $1 = ligne;
+    }
+  tELSE Bloc {
+    int current = get_nb_lignes_asm();
+    patchJMP($1, current+1);
     } 
 
-Else: | 
-  tELSE Bloc {
-    incrDepth();
-      //?
-    decrDepth();
-  } 
-
-Expression: Valeur Comparaison Valeur | Valeur;
-
-Comparaison: tINF | tSUP | tINF tEQU | tSUP tEQU | tEQU tEQU;
+Expression: 
+Valeur tINF Valeur {add_arit(INF, avant_derniere(), avant_derniere(),derniere());} 
+|Valeur tSUP Valeur {add_arit(SUP, avant_derniere(), avant_derniere(),derniere());}
+|Valeur tEQU tEQU Valeur {add_arit(EQU, avant_derniere(), avant_derniere(),derniere());}  
+|Valeur tINF tEQU Valeur {add_arit(INF, avant_derniere(), avant_derniere(),derniere()+1);}
+|Valeur tSUP tEQU Valeur {add_arit(SUP, avant_derniere(), avant_derniere(),derniere()-1);}
+|Valeur;
 
     /* While */
 
 ConditionWhile: 
-  tWHILE tPAROPEN Expression tPARCLOSE Bloc Content
-| tWHILE tPAROPEN Expression tPARCLOSE tSEM Content;
+  tWHILE tPAROPEN Expression tPARCLOSE
+  {
+    add_inst2(JMF,derniere());
+    int ligne = get_nb_lignes_asm();
+    $1 = ligne;
+  }
+   Bloc 
+  {
+    int current = get_nb_lignes_asm();
+    patchJMF($1, current+2);
+    add_inst2(JMP,$1-1);
+  } 
 
 %%
 

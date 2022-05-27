@@ -45,10 +45,16 @@ type memory is array (0 to 511) of std_logic_vector(31 downto 0);
 signal s_Mem : memory:= (others => (others => '0'));
 
 begin
-s_mem <= (x"06010200", others=>x"06010200");
--- Partie mémoire instructions
-S_OUT<=s_Mem(to_integer(unsigned(Addr))); -- a verif
+s_mem <= (x"06000300", x"06010200", others=>x"05000100");
+process(CLK)
 
+    begin
+    if rising_edge(CLK) then
+        
+        -- Partie mémoire instructions
+        S_OUT<=s_Mem(to_integer(unsigned(Addr))); -- a verif
+    end if;
+end process;
 
 
 end Behavioral;

@@ -80,13 +80,8 @@ Label_CD: CheminDeDonnees PORT MAP (
         tCLK <= not(tCLK);
         wait for Clock_period/2;
     end process;
-    
-    tA <= "00000001" after 0 ns;
-    tB <= "00000010" after 0 ns;
-    tC <= "00000000" after 0 ns;
-    tOP <= "00000000" after 0 ns;
-    tS_W <= '0' after 0 ns;
-    tRST <= '1' after 0 ns, '0' after 500 ns;
+
+    tRST <= '1' after 0 ns;
 
 
 end Behavioral;

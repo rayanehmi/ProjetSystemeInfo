@@ -45,6 +45,7 @@ end CheminDeDonnees;
 architecture Behavioral of CheminDeDonnees is
 
 signal IP : STD_LOGIC_VECTOR (7 downto 0):="00000000";
+signal IP_starter : std_logic_VECTOR (7 downto 0) :="00000000";
 
 --BMI
 COMPONENT BMI
@@ -110,13 +111,23 @@ signal op_diex : STD_LOGIC_VECTOR(7 downto 0);
 signal op_exmem : STD_LOGIC_VECTOR(7 downto 0);
 signal op_memre : STD_LOGIC_VECTOR(7 downto 0);
 
-signal LC_converter : STD_LOGIC;
-signal reset : STD_LOGIC;
---signal clock : STD_LOGIC;
-signal MUX_converter : STD_LOGIC_VECTOR(7 downto 0);
+signal LC_converter_UAL : STD_LOGIC_VECTOR(7 downto 0);
+signal LC_converter_BMD : STD_LOGIC;
+signal LC_converter_CD : STD_LOGIC;
 
-signal LC_Ctrl_Alu : STD_LOGIC_VECTOR(7 downto 0);
-signal MUX_S : STD_LOGIC_VECTOR(7 downto 0);
+signal MUX_converter_BR : STD_LOGIC_VECTOR(7 downto 0);
+signal MUX_converter_UAL : STD_LOGIC_VECTOR(7 downto 0);
+signal MUX_converter_BMD_1 : STD_LOGIC_VECTOR(7 downto 0);
+signal MUX_converter_BMD_2 : STD_LOGIC_VECTOR(7 downto 0);
+
+--Quand la sortie passe par un MUX ou LC on doit passer par une variable temporaire
+signal out_QA : STD_LOGIC_VECTOR(7 downto 0); 
+signal out_S : STD_LOGIC_VECTOR(7 downto 0); 
+signal out_B : STD_LOGIC_VECTOR(7 downto 0); 
+signal out_out : STD_LOGIC_VECTOR(7 downto 0); 
+
+
+signal reset : STD_LOGIC;
 signal Carry : STD_LOGIC;
 signal Neg : STD_LOGIC;
 signal Overflow : STD_LOGIC;
@@ -126,37 +137,35 @@ signal lecture_bmi : STD_LOGIC_VECTOR(31 downto 0);
 
 begin
 
-LC_converter <= '1' when op_memre = "0110";
-
 Label_br: BR PORT MAP (
     A => b_lidi,
     B => c_lidi,
     W => a_memre,
     DATA => b_memre,
-    Wlogic => LC_converter, --verif
+    Wlogic => LC_converter_CD, --verif
     RST => reset,
     CLK => CLK_CD,
-    QA => MUX_converter, --verif
+    QA => out_QA, --verif
     QB => c_diex
     );
 
 Label_ual: UAL PORT MAP (
     A =>b_diex,
     B =>c_diex,
-    Ctrl_Alu => LC_Ctrl_Alu, --verif
+    Ctrl_Alu => LC_converter_UAL, --verif
     carry => Carry,  --verif
     neg => Neg, --verif
     overflow => Overflow,
-    S => MUX_S --verif
+    S => out_S --verif
     );
     
 Label_bmd: BMD PORT MAP (
-    Addr => MUX_converter, --verif
+    Addr => MUX_converter_BMD_1, --verif
     S_IN => b_exmem,
-    RW => LC_converter, --verif
+    RW => LC_converter_BMD, --verif
     RST => reset, --verif
     CLK => CLK_CD, --verif
-    S_OUT => b_memre
+    S_OUT => out_out
     );    
     
 Label_bmi: BMI PORT MAP (
@@ -174,14 +183,17 @@ if rising_edge(CLK_CD) then
 -- Deuxieme passage par le banc de registre pour ecriture
     --rien a faire car deja fait
     
--- Logique combinatoire ppour savoir si on écrit    
-    if op_exmem=x"6" then --or ... 
-        LC_converter <= '1'; --ecriture
+-- Logique combinatoire ppour savoir si on écrit en mémoire  
+-- 5_COP 6_AFC 8_STORE
+    if unsigned(op_exmem)=5 or unsigned(op_exmem)=6 or unsigned(op_exmem)=8 then
+        LC_converter_CD <= '1'; --ecriture
     else
-        LC_converter <= '1';
+        LC_converter_CD <= '0';
     end if;
     
--- je sais pas
+
+    
+-- Transition memoire des donnees
     a_memre <= a_exmem;
     op_memre <= op_exmem;
     b_memre <= b_exmem;
@@ -197,7 +209,12 @@ if rising_edge(CLK_CD) then
 -- recuperer les valeurs dans le banc de registre 
     a_diex <= a_lidi;
     op_diex <= op_lidi;
-    b_diex <= b_lidi;
+    --Multiplexeur du banc de registre
+    if unsigned(op_lidi)=5 then
+        b_diex <= out_QA;
+    else
+        b_diex <= b_lidi;
+    end if;
 
 -- lire le tableau d'instruction
     op_lidi <= lecture_bmi (31 downto 24);
@@ -206,7 +223,8 @@ if rising_edge(CLK_CD) then
     c_lidi <= lecture_bmi (7 downto 0);
 
 -- Passer a l'instruction suivante
-    IP <= std_logic_vector (unsigned(IP) + 1);
+    IP <= std_logic_vector (unsigned(IP) + unsigned(IP_starter));
+    IP_starter <= "00000001"; --permet de ne pas sauter la premiere instruction
 end if; --clock
 
 end process;

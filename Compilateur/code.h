@@ -5,7 +5,11 @@
 #define AFC "AFC"
 #define COP "COP"
 #define PRI "PRI"
-#define JMPF "JMPF"
+#define JMP "JMP"
+#define JMF "JMF"
+#define INF "INF"
+#define SUP "SUP"
+#define EQU "EQU"
 
 
 
@@ -19,4 +23,6 @@ void add_inst(char opera[5]);
 
 int get_nb_lignes_asm();
 
-//void addLigne (ligne newLine);
+void patchJMP(int from, int to);
+
+void patchJMF(int from, int to);

@@ -2,17 +2,112 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Thu May 26 10:07:35 2022
-# Process ID: 2017
+# Start of session at: Fri May 27 14:06:32 2022
+# Process ID: 3793
 # Current directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur
 # Command line: vivado
 # Log file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.log
 # Journal file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/rhachemi/Bureau/TD_ArchiMat/TD_ArchiMat.xpr
 open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr
 update_compile_order -fileset sources_1
+launch_simulation
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 178
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 181
+close_sim
+launch_simulation
+source Test_CD.tcl
+step
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 129
+step
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 129
+step
+step
+step
+step
+step
+step
+step
+step
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 187
+run all
+run all
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 178
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 171
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 192
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_BMD [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+launch_simulation
+source Test_BMD.tcl
+update_compile_order -fileset sim_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
 set_property top Test_CD [get_filesets sim_1]
@@ -20,178 +115,108 @@ set_property top_lib xil_defaultlib [get_filesets sim_1]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sim_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-launch_runs impl_1 -jobs 12
-wait_on_run impl_1
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
+current_sim simulation_2
 close_sim
 launch_simulation
 source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 178
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-step
-step
-step
-step
-close_sim
-launch_simulation
-source Test_CD.tcl
-step
-reset_run synth_1
-launch_runs synth_1 -jobs 12
-wait_on_run synth_1
-close_sim
-launch_simulation
-source Test_CD.tcl
-step
-step
-step
-step
-step
-step
-step
-step
-step
-step
-step
-step
-step
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 171
-remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 178
-remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 178
-run all
-run all
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 181
-add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-run all
-restart
-remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
-remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 178
 remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 181
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 186
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 187
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 186
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 192
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 192
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 171
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 192
 run all
 run all
 run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 171
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Test_CD.tcl
+close_sim
+launch_simulation
+source Test_CD.tcl
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 212
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 213
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 215
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+close_sim
+launch_simulation
+source Test_CD.tcl
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 213
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 215
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 212
+run all
+run all
+restart
+run all
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+source Test_CD.tcl
+restart
 restart
 run all
 run all
@@ -218,4 +243,301 @@ run all
 run all
 run all
 run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
+run all
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 179
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 179
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+restart
+restart
+step
+step
+run all
+run all
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+restart
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+step
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+close_sim
 close_sim

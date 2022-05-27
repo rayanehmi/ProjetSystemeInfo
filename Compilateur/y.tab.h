@@ -63,15 +63,15 @@ extern int yydebug;
     tBRACLOSE = 269,
     tMAIN = 270,
     tRETURN = 271,
-    tIF = 272,
-    tELSE = 273,
-    tWHILE = 274,
-    tCOMMA = 275,
-    tQUOTE = 276,
-    tPRINTF = 277,
-    tSUP = 278,
-    tINF = 279,
-    tNB = 280,
+    tELSE = 272,
+    tCOMMA = 273,
+    tQUOTE = 274,
+    tPRINTF = 275,
+    tSUP = 276,
+    tINF = 277,
+    tNB = 278,
+    tIF = 279,
+    tWHILE = 280,
     tID = 281
   };
 #endif
@@ -90,15 +90,15 @@ extern int yydebug;
 #define tBRACLOSE 269
 #define tMAIN 270
 #define tRETURN 271
-#define tIF 272
-#define tELSE 273
-#define tWHILE 274
-#define tCOMMA 275
-#define tQUOTE 276
-#define tPRINTF 277
-#define tSUP 278
-#define tINF 279
-#define tNB 280
+#define tELSE 272
+#define tCOMMA 273
+#define tQUOTE 274
+#define tPRINTF 275
+#define tSUP 276
+#define tINF 277
+#define tNB 278
+#define tIF 279
+#define tWHILE 280
 #define tID 281
 
 /* Value type.  */

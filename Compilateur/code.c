@@ -66,5 +66,10 @@ int get_nb_lignes_asm(){
     return(indexTableInstruction-1);
 }
 
-// void patch(){}
+void patchJMP(int from, int to){
+    tabInstruction[from].var1 = to;
+}
 
+void patchJMF(int from, int to){
+    tabInstruction[from].var2 = to;
+}
