@@ -1,0 +1,1594 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 31 14:38:00 2022
+# Process ID: 21286
+# Current directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur
+# Command line: vivado
+# Log file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.log
+# Journal file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:41:38 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:43:18 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 6384.164 ; gain = 0.000 ; free physical = 58913 ; free virtual = 70606
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:48:37 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:50:47 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:53:14 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BR
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:54:38 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 14:58:06 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:07:29 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:08:51 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:19:49 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:27:01 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:29:27 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:31:50 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:34:38 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:43:39 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:45:23 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:46:11 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 245
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 246
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 248
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 248
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 246
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 245
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 15:55:57 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:00:47 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:01:10 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:06:31 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:08:57 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 300 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 140 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:16:28 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 140 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:20:36 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+relaunch_sim
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity CheminDeDonnees
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 140 ns
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
+
+launch_runs synth_1 -jobs 12
+[Tue May 31 16:28:13 2022] Launched synth_1...
+Run output will be captured here: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/runme.log
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'Test_CD' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+xvhdl --incr --relax -prj Test_CD_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd" into library xil_defaultlib
+INFO: [VRFC 10-307] analyzing entity BMI
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.2
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /usr/local/insa/Xilinx.VIVADO/Vivado/2018.2/bin/unwrapped/lnx64.o/xelab -wto 82d0cde0ff5c46bda809e1035289a6fa --incr --debug typical --relax --mt 8 -L xil_defaultlib -L secureip --snapshot Test_CD_behav xil_defaultlib.Test_CD -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.math_real
+Compiling architecture behavioral of entity xil_defaultlib.BR [br_default]
+Compiling architecture behavioral of entity xil_defaultlib.UAL [ual_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMD [bmd_default]
+Compiling architecture behavioral of entity xil_defaultlib.BMI [bmi_default]
+Compiling architecture behavioral of entity xil_defaultlib.CheminDeDonnees [chemindedonnees_default]
+Compiling architecture behavioral of entity xil_defaultlib.test_cd
+Built simulation snapshot Test_CD_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Test_CD_behav -key {Behavioral:sim_1:Functional:Test_CD} -tclbatch {Test_CD.tcl} -view {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.2
+Time resolution is 1 ps
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Test_CD_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 16:29:49 2022...

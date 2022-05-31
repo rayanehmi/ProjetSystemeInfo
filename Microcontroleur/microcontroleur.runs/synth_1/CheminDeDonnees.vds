@@ -2,8 +2,8 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue May 31 16:28:15 2022
-# Process ID: 65688
+# Start of session at: Tue May 31 18:16:04 2022
+# Process ID: 246452
 # Current directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1
 # Command line: vivado -log CheminDeDonnees.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source CheminDeDonnees.tcl
 # Log file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/CheminDeDonnees.vds
@@ -15,28 +15,26 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 65731 
+INFO: Helper process launched with PID 246537 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.270 ; gain = 83.828 ; free physical = 58891 ; free virtual = 70606
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.273 ; gain = 83.809 ; free physical = 107421 ; free virtual = 135827
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'CheminDeDonnees' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:77]
-INFO: [Synth 8-3491] module 'BR' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:35' bound to instance 'Label_br' of component 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:172]
+INFO: [Synth 8-3491] module 'BR' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:35' bound to instance 'Label_br' of component 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:173]
 INFO: [Synth 8-638] synthesizing module 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'BR' (1#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:48]
-INFO: [Synth 8-3491] module 'UAL' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:34' bound to instance 'Label_ual' of component 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:184]
+INFO: [Synth 8-3491] module 'UAL' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:34' bound to instance 'Label_ual' of component 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:185]
 INFO: [Synth 8-638] synthesizing module 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:46]
 INFO: [Synth 8-256] done synthesizing module 'UAL' (2#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:46]
-INFO: [Synth 8-3491] module 'BMD' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:35' bound to instance 'Label_bmd' of component 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:194]
+INFO: [Synth 8-3491] module 'BMD' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:35' bound to instance 'Label_bmd' of component 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:195]
 INFO: [Synth 8-638] synthesizing module 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'BMD' (3#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:44]
-INFO: [Synth 8-3491] module 'BMI' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:34' bound to instance 'Label_bmi' of component 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:203]
+INFO: [Synth 8-3491] module 'BMI' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:34' bound to instance 'Label_bmi' of component 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:204]
 INFO: [Synth 8-638] synthesizing module 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'BMI' (4#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:40]
-WARNING: [Synth 8-6014] Unused sequential element op_memre_reg was removed.  [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:226]
+WARNING: [Synth 8-6014] Unused sequential element op_memre_reg was removed.  [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:243]
 WARNING: [Synth 8-3848] Net S_W2 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:73]
-WARNING: [Synth 8-3848] Net LC_converter_BMD in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:145]
-WARNING: [Synth 8-3848] Net MUX_converter_BMD_1 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:150]
-WARNING: [Synth 8-3848] Net reset in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:161]
+WARNING: [Synth 8-3848] Net reset in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:162]
 INFO: [Synth 8-256] done synthesizing module 'CheminDeDonnees' (5#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:77]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port S_W2
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port RST
@@ -74,18 +72,18 @@ WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[2]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[1]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58901 ; free virtual = 70616
+Finished Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1299.898 ; gain = 128.434 ; free physical = 107431 ; free virtual = 135838
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58901 ; free virtual = 70617
+Finished Constraint Validation : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1299.898 ; gain = 128.434 ; free physical = 107432 ; free virtual = 135839
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
-INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.898 ; gain = 136.457 ; free physical = 58901 ; free virtual = 70617
+INFO: [Device 21-403] Loading part xc7a35tcpg236-1
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1307.902 ; gain = 136.438 ; free physical = 107431 ; free virtual = 135838
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "s_Mem_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[1]" won't be mapped to RAM because it is too sparse
@@ -135,9 +133,10 @@ INFO: [Synth 8-5546] ROM "s_Mem_reg[28]" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "s_Mem_reg[29]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "LC_converter_BMD" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 WARNING: [Synth 8-327] inferring latch for variable 'S_OUT_reg' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1323.914 ; gain = 152.473 ; free physical = 58874 ; free virtual = 70589
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1323.918 ; gain = 152.453 ; free physical = 107406 ; free virtual = 135813
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -156,13 +155,14 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               27 Bit    Registers := 1     
-	                8 Bit    Registers := 63    
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 65    
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   4 Input     27 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 6     
-	 256 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 48    
+	 256 Input     27 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 8     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 51    
+	   3 Input      1 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -175,10 +175,13 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 15    
-	                1 Bit    Registers := 1     
+	                8 Bit    Registers := 17    
+	                1 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 3     
+	   2 Input      8 Bit        Muxes := 5     
+	   3 Input      8 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 3     
+	   3 Input      1 Bit        Muxes := 1     
 Module BR 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -204,8 +207,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               27 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     27 Bit        Muxes := 1     
-	 256 Input      2 Bit        Muxes := 1     
+	 256 Input     27 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -271,6 +273,7 @@ INFO: [Synth 8-5546] ROM "Label_bmd/s_Mem_reg[28]" won't be mapped to RAM becaus
 INFO: [Synth 8-5546] ROM "Label_bmd/s_Mem_reg[29]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Label_bmd/s_Mem_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "Label_bmd/s_Mem_reg[31]" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5545] ROM "LC_converter_BMD" won't be mapped to RAM because address size (31) is larger than maximum supported(25)
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port S_W2
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port RST
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port C[7]
@@ -403,12 +406,12 @@ WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[3]) is unused a
 WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[2]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[1]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[0]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (b_memre_reg[7]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (b_memre_reg[6]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (b_memre_reg[5]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_exmem_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_exmem_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_exmem_reg[0]) is unused and will be removed from module CheminDeDonnees.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107288 ; free virtual = 135698
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -421,7 +424,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Timing Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -433,7 +436,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Technology Mapping : Time (s): cpu = 00:00:10 ; elapsed = 00:00:21 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -457,7 +460,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished IO Insertion : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -470,7 +473,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -482,25 +485,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -526,11 +529,11 @@ Report Instance Areas:
 |1     |top      |       |     1|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 593 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
-Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.008 ; gain = 244.559 ; free physical = 58758 ; free virtual = 70476
+Synthesis finished with 0 errors, 0 critical warnings and 608 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.004 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
+Synthesis Optimization Complete : Time (s): cpu = 00:00:11 ; elapsed = 00:00:22 . Memory (MB): peak = 1416.012 ; gain = 244.539 ; free physical = 107289 ; free virtual = 135699
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -538,11 +541,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
+120 Infos, 174 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1499.023 ; gain = 339.207 ; free physical = 58721 ; free virtual = 70438
+synth_design: Time (s): cpu = 00:00:13 ; elapsed = 00:00:24 . Memory (MB): peak = 1499.027 ; gain = 339.207 ; free physical = 107262 ; free virtual = 135672
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/CheminDeDonnees.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CheminDeDonnees_utilization_synth.rpt -pb CheminDeDonnees_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1523.035 ; gain = 0.000 ; free physical = 58723 ; free virtual = 70440
-INFO: [Common 17-206] Exiting Vivado at Tue May 31 16:28:38 2022...
+report_utilization: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:00.14 . Memory (MB): peak = 1523.039 ; gain = 0.000 ; free physical = 107263 ; free virtual = 135673
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 18:16:38 2022...

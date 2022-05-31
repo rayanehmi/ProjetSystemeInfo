@@ -156,6 +156,7 @@ signal out_QB : STD_LOGIC_VECTOR(7 downto 0);
 signal out_S : STD_LOGIC_VECTOR(7 downto 0); 
 signal out_B : STD_LOGIC_VECTOR(7 downto 0); 
 signal out_out : STD_LOGIC_VECTOR(7 downto 0); 
+signal in_in : STD_LOGIC_VECTOR(7 downto 0); 
 
 
 signal reset : STD_LOGIC;
@@ -193,7 +194,7 @@ Label_ual: UAL PORT MAP (
     
 Label_bmd: BMD PORT MAP (
     Addr => MUX_converter_BMD_1, --verif
-    S_IN => b_exmem,
+    S_IN => in_in,
     RW => LC_converter_BMD, --verif
     RST => reset, --verif
     CLK => CLK_CD, --verif
@@ -213,18 +214,33 @@ if rising_edge(CLK_CD) then
    
 -- Multiplexeur banc de registre
 -- 1_ADD 2_MUL 3_SUB 4_DIV 5_COP 6_AFC 7_LOAD 8_STORE
-    if unsigned(op_exmem)=7 or unsigned(op_exmem)=0 then
+    if unsigned(op_exmem)=8 or unsigned(op_exmem)=0 then
         LC_converter_CD <= '0';
     else
         LC_converter_CD <= '1';--ecriture
     end if;
     
-
+    -- LC memoire des donnees
+    if unsigned(op_exmem)=8 then
+        LC_converter_BMD <= '1'; --ecriture
+    else
+        LC_converter_BMD <= '0';
+    end if;
 
 -- Transition memoire des donnees
+    --MUX BMD
+    if unsigned(op_exmem)=8 then -- store addr val
+        MUX_converter_BMD_1 <= a_exmem;
+        in_in <= b_exmem;
+        b_memre <= b_exmem;
+    elsif unsigned(op_exmem)=7 then --load registre addr
+        MUX_converter_BMD_1 <= b_exmem;
+        b_memre <= out_OUT;
+    else
+        b_memre <= b_exmem;
+    end if;
     a_memre <= a_exmem;
     op_memre <= op_exmem;
-    b_memre <= b_exmem;
 
 -- On envoie la valeur dans le tableau de données
     a_exmem <= a_diex;

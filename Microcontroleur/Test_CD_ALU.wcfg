@@ -11,88 +11,21 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="249931600fs"></ZoomEndTime>
-      <Cursor1Time time="90000000fs"></Cursor1Time>
+      <ZoomEndTime time="207110756fs"></ZoomEndTime>
+      <Cursor1Time time="170000000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="132"></NameColumnWidth>
+      <NameColumnWidth column_width="120"></NameColumnWidth>
       <ValueColumnWidth column_width="66"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="19" />
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/s_Mem[0]">
-      <obj_property name="ElementShortName">[0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+   <WVObjectSize size="2" />
+   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/s_Mem">
+      <obj_property name="ElementShortName">s_Mem[0:15][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_Mem[0:15][7:0]</obj_property>
+      <obj_property name="isExpanded"></obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/s_Mem[1]">
-      <obj_property name="ElementShortName">[1][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[1][7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/s_Mem[2]">
-      <obj_property name="ElementShortName">[2][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[2][7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/A">
-      <obj_property name="ElementShortName">A[7:0]</obj_property>
-      <obj_property name="ObjectShortName">A[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/B">
-      <obj_property name="ElementShortName">B[7:0]</obj_property>
-      <obj_property name="ObjectShortName">B[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/W">
-      <obj_property name="ElementShortName">W[7:0]</obj_property>
-      <obj_property name="ObjectShortName">W[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/op_memre">
-      <obj_property name="ElementShortName">op_memre[7:0]</obj_property>
-      <obj_property name="ObjectShortName">op_memre[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="logic" fp_name="/Test_CD/Label_CD/Label_br/Wlogic">
-      <obj_property name="ElementShortName">Wlogic</obj_property>
-      <obj_property name="ObjectShortName">Wlogic</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/DATA">
-      <obj_property name="ElementShortName">DATA[7:0]</obj_property>
-      <obj_property name="ObjectShortName">DATA[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/QA">
-      <obj_property name="ElementShortName">QA[7:0]</obj_property>
-      <obj_property name="ObjectShortName">QA[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_br/QB">
-      <obj_property name="ElementShortName">QB[7:0]</obj_property>
-      <obj_property name="ObjectShortName">QB[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_ual/A">
-      <obj_property name="ElementShortName">A[7:0]</obj_property>
-      <obj_property name="ObjectShortName">A[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_ual/B">
-      <obj_property name="ElementShortName">B[7:0]</obj_property>
-      <obj_property name="ObjectShortName">B[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_ual/Ctrl_Alu">
-      <obj_property name="ElementShortName">Ctrl_Alu[7:0]</obj_property>
-      <obj_property name="ObjectShortName">Ctrl_Alu[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_ual/S">
-      <obj_property name="ElementShortName">S[7:0]</obj_property>
-      <obj_property name="ObjectShortName">S[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/b_lidi">
-      <obj_property name="ElementShortName">b_lidi[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_lidi[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/b_diex">
-      <obj_property name="ElementShortName">b_diex[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_diex[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/b_exmem">
-      <obj_property name="ElementShortName">b_exmem[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_exmem[7:0]</obj_property>
-   </wvobject>
-   <wvobject type="array" fp_name="/Test_CD/Label_CD/b_memre">
-      <obj_property name="ElementShortName">b_memre[7:0]</obj_property>
-      <obj_property name="ObjectShortName">b_memre[7:0]</obj_property>
+   <wvobject type="array" fp_name="/Test_CD/Label_CD/Label_bmd/s_Mem">
+      <obj_property name="ElementShortName">s_Mem[0:31][7:0]</obj_property>
+      <obj_property name="ObjectShortName">s_Mem[0:31][7:0]</obj_property>
    </wvobject>
 </wave_config>
