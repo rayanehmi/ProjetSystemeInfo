@@ -39,9 +39,9 @@ architecture Behavioral of Test_BR is
 
 COMPONENT BR
 PORT(
-    A : in STD_LOGIC_VECTOR (3 downto 0);
-    B : in STD_LOGIC_VECTOR (3 downto 0);
-    W : in STD_LOGIC_VECTOR (3 downto 0);
+    A : in STD_LOGIC_VECTOR (7 downto 0);
+    B : in STD_LOGIC_VECTOR (7 downto 0);
+    W : in STD_LOGIC_VECTOR (7 downto 0);
     Wlogic : in STD_LOGIC;
     DATA : in STD_LOGIC_VECTOR (7 downto 0);
     RST : in STD_LOGIC;
@@ -51,9 +51,9 @@ PORT(
 END COMPONENT;
 
 -- Inputs
-signal tA : std_logic_vector(3 downto 0) := (others=> '0');
-signal tB :  std_logic_vector(3 downto 0) := (others=> '0');
-signal tW :  std_logic_vector(3 downto 0) := (others=> '0');
+signal tA : std_logic_vector(7 downto 0) := (others=> '0');
+signal tB :  std_logic_vector(7 downto 0) := (others=> '0');
+signal tW :  std_logic_vector(7 downto 0) := (others=> '0');
 signal tDATA :  std_logic_vector(7 downto 0) := (others=> '0');
 signal tWlogic : std_logic := '0';
 signal tRST : std_logic := '0';
@@ -85,9 +85,9 @@ Label_uut: BR PORT MAP (
         wait for Clock_period/2;
     end process;
     
-    tA <= "00000001" after 0 ns;
-    tB <= "0010" after 0 ns;
-    tW <= "0001" after 0 ns;
+    tA <= "00000001" after 0 ns, "00000000" after 60ns;
+    tB <= "00000010" after 0 ns, "00000000" after 60ns;
+    tW <= "00000000" after 0 ns;
     tDATA <= "00001110" after 0 ns;
     tWlogic <= '1' after 0 ns, '0' after 60 ns;
 

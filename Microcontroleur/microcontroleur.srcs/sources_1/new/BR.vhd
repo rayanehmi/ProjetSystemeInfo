@@ -53,8 +53,8 @@ signal s_Mem : memory:= (others => (others => '0'));
 begin
 
 --mode lecture
-QA<=s_Mem(to_integer(unsigned(A))) when A/=W or Wlogic ='0';
-QB<=s_Mem(to_integer(unsigned(B))) when B/=W or Wlogic ='0';
+QA<= DATA when A=W and Wlogic ='1' else s_Mem(to_integer(unsigned(A)));
+QB<= DATA when B=W and Wlogic ='1' else s_Mem(to_integer(unsigned(B)));
 
 -- Asynchrone car 1 front montant donc hors du process
 

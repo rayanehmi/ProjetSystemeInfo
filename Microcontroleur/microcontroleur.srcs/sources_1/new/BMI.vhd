@@ -45,7 +45,16 @@ type memory is array (0 to 511) of std_logic_vector(31 downto 0);
 signal s_Mem : memory:= (others => (others => '0'));
 
 begin
-s_mem <= (x"06000300", x"06010200", others=>x"05000100");
+-- AFC R0 3
+-- AFC R1 2
+-- ADD R2 R0 R1
+-- MUL R3 R0 R1
+-- SUB R4 R0 R1
+-- DIV R5 R0 R1
+-- COP R0 R1
+
+--s_mem <= (x"06000300", x"06010200", x"01020001", x"02030001", x"03040001", x"04050001", x"05000100", others=>x"00000000");
+s_mem <= (x"06000300", x"06010200", x"00000000", x"00000000", x"00000000", x"00000000", x"01020001", x"01020001", others=>x"00000000");
 process(CLK)
 
     begin

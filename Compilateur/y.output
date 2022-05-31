@@ -1,99 +1,129 @@
 Terminaux inutilisés dans la grammaire
 
-    tCONST
     tMAIN
     tQUOTE
+
+
+Règles inutiles dans l'analyseur à cause de conflits
+
+    3 Consts: Const
+
+   27 $@4: %empty
+
+
+État 4 conflits: 1 réduction/réduction
+État 61 conflits: 3 réduction/réduction
 
 
 Grammaire
 
     0 $accept: Programme $end
 
-    1 Programme: Funs
+    1 Programme: Consts Funs
 
-    2 Funs: Fun
-    3     | Fun Funs
+    2 Consts: %empty
+    3       | Const
+    4       | Const Consts
 
-    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE Bloc
+    5 Const: tCONST tID Valeur
 
-    5 Bloc: tBRAOPEN Content tBRACLOSE
-    6     | tBRAOPEN Content tRETURN Valeur tBRACLOSE
+    6 Funs: Fun
+    7     | Fun Funs
 
-    7 Vars: %empty
-    8     | tINT tID VarsNext
+    8 Fun: tINT tID tPAROPEN Vars tPARCLOSE Bloc
 
-    9 VarsNext: %empty
-   10         | tCOMMA tINT tID VarsNext
+    9 Bloc: tBRAOPEN Content tBRACLOSE
+   10     | tBRAOPEN Content tRETURN Valeur tBRACLOSE
 
-   11 Content: Affectation Content
-   12        | Declaration Content
-   13        | Printf Content
-   14        | Condition Content
-   15        | ConditionWhile Content
-   16        | %empty
+   11 Vars: %empty
+   12     | tINT tID VarsNext
 
-   17 $@1: %empty
+   13 VarsNext: %empty
+   14         | tCOMMA tINT tID VarsNext
 
-   18 Declaration: tINT tID tEQU $@1 Valeur tSEM
+   15 Content: Affectation Content
+   16        | tINT Declaration Content
+   17        | Printf Content
+   18        | Condition Content
+   19        | ConditionWhile Content
+   20        | %empty
 
-   19 Affectation: tID tEQU Valeur tSEM
+   21 $@1: %empty
 
-   20 Valeur: Valeur tADD Valeur
-   21       | Valeur tMIN Valeur
-   22       | Valeur tDIV Valeur
-   23       | Valeur tMUL Valeur
-   24       | tNB
-   25       | tID
-   26       | tPAROPEN Valeur tPARCLOSE
+   22 Declaration: tID tEQU $@1 Valeur tSEM
 
-   27 Printf: tPRINTF tPAROPEN tID tPARCLOSE tSEM
+   23 $@2: %empty
 
-   28 $@2: %empty
+   24 Declaration: tID $@2 tSEM
 
-   29 $@3: %empty
+   25 $@3: %empty
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 Bloc $@3 tELSE Bloc
+   26 Declaration: tID $@3 tCOMMA Declaration
 
-   31 Expression: Valeur tINF Valeur
-   32           | Valeur tSUP Valeur
-   33           | Valeur tEQU tEQU Valeur
-   34           | Valeur tINF tEQU Valeur
-   35           | Valeur tSUP tEQU Valeur
-   36           | Valeur
+   27 $@4: %empty
 
-   37 $@4: %empty
+   28 $@5: %empty
 
-   38 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@4 Bloc
+   29 Declaration: tID tEQU $@4 Valeur $@5 tCOMMA Declaration
+
+   30 Affectation: tID tEQU Valeur tSEM
+
+   31 Valeur: Valeur tADD Valeur
+   32       | Valeur tMIN Valeur
+   33       | Valeur tDIV Valeur
+   34       | Valeur tMUL Valeur
+   35       | tNB
+   36       | tID
+   37       | tPAROPEN Valeur tPARCLOSE
+
+   38 Printf: tPRINTF tPAROPEN tID tPARCLOSE tSEM
+
+   39 $@6: %empty
+
+   40 $@7: %empty
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 Bloc $@7 tELSE Bloc
+
+   42 Expression: Valeur tINF Valeur
+   43           | Valeur tSUP Valeur
+   44           | Valeur tEQU tEQU Valeur
+   45           | Valeur tINF tEQU Valeur
+   46           | Valeur tSUP tEQU Valeur
+   47           | Valeur
+
+   48 $@8: %empty
+
+   49 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@8 Bloc
 
 
 Terminaux, suivis des règles où ils apparaissent
 
     $end (0) 0
     error (256)
-    tINT (258) 4 8 10 18
-    tCONST (259)
-    tADD (260) 20
-    tMIN (261) 21
-    tMUL (262) 23
-    tDIV (263) 22
-    tEQU (264) 18 19 33 34 35
-    tSEM (265) 18 19 27
-    tPAROPEN (266) 4 26 27 30 38
-    tPARCLOSE (267) 4 26 27 30 38
-    tBRAOPEN (268) 5 6
-    tBRACLOSE (269) 5 6
+    tINT (258) 8 12 14 16
+    tCONST (259) 5
+    tADD (260) 31
+    tMIN (261) 32
+    tMUL (262) 34
+    tDIV (263) 33
+    tEQU (264) 22 29 30 44 45 46
+    tSEM (265) 22 24 30 38
+    tPAROPEN (266) 8 37 38 41 49
+    tPARCLOSE (267) 8 37 38 41 49
+    tBRAOPEN (268) 9 10
+    tBRACLOSE (269) 9 10
     tMAIN (270)
-    tRETURN (271) 6
-    tELSE (272) 30
-    tCOMMA (273) 10
+    tRETURN (271) 10
+    tELSE (272) 41
+    tCOMMA (273) 14 26 29
     tQUOTE (274)
-    tPRINTF (275) 27
-    tSUP (276) 32 35
-    tINF (277) 31 34
-    tNB <nb> (278) 24
-    tIF <nb> (279) 30
-    tWHILE <nb> (280) 38
-    tID <str> (281) 4 8 10 18 19 25 27
+    tPRINTF (275) 38
+    tSUP (276) 43 46
+    tINF (277) 42 45
+    tNB <nb> (278) 35
+    tIF <nb> (279) 41
+    tWHILE <nb> (280) 49
+    tID <str> (281) 5 8 12 14 22 24 26 29 30 36 38
 
 
 Non-terminaux, suivis des règles où ils apparaissent
@@ -103,73 +133,93 @@ Non-terminaux, suivis des règles où ils apparaissent
     Programme (28)
         à gauche: 1
         à droite: 0
-    Funs (29)
-        à gauche: 2 3
-        à droite: 1 3
-    Fun (30)
-        à gauche: 4
-        à droite: 2 3
-    Bloc (31)
-        à gauche: 5 6
-        à droite: 4 30 38
-    Vars (32)
-        à gauche: 7 8
-        à droite: 4
-    VarsNext (33)
+    Consts (29)
+        à gauche: 2 3 4
+        à droite: 1 4
+    Const (30)
+        à gauche: 5
+        à droite: 3 4
+    Funs (31)
+        à gauche: 6 7
+        à droite: 1 7
+    Fun (32)
+        à gauche: 8
+        à droite: 6 7
+    Bloc (33)
         à gauche: 9 10
-        à droite: 8 10
-    Content (34)
-        à gauche: 11 12 13 14 15 16
-        à droite: 5 6 11 12 13 14 15
-    Declaration (35)
-        à gauche: 18
-        à droite: 12
-    $@1 (36)
-        à gauche: 17
-        à droite: 18
-    Affectation (37)
-        à gauche: 19
-        à droite: 11
-    Valeur (38)
-        à gauche: 20 21 22 23 24 25 26
-        à droite: 6 18 19 20 21 22 23 26 31 32 33 34 35 36
-    Printf (39)
+        à droite: 8 41 49
+    Vars (34)
+        à gauche: 11 12
+        à droite: 8
+    VarsNext (35)
+        à gauche: 13 14
+        à droite: 12 14
+    Content (36)
+        à gauche: 15 16 17 18 19 20
+        à droite: 9 10 15 16 17 18 19
+    Declaration (37)
+        à gauche: 22 24 26 29
+        à droite: 16 26 29
+    $@1 (38)
+        à gauche: 21
+        à droite: 22
+    $@2 (39)
+        à gauche: 23
+        à droite: 24
+    $@3 (40)
+        à gauche: 25
+        à droite: 26
+    $@4 (41)
         à gauche: 27
-        à droite: 13
-    Condition (40)
-        à gauche: 30
-        à droite: 14
-    $@2 (41)
+        à droite: 29
+    $@5 (42)
         à gauche: 28
-        à droite: 30
-    $@3 (42)
-        à gauche: 29
-        à droite: 30
-    Expression (43)
-        à gauche: 31 32 33 34 35 36
-        à droite: 30 38
-    ConditionWhile (44)
-        à gauche: 38
+        à droite: 29
+    Affectation (43)
+        à gauche: 30
         à droite: 15
-    $@4 (45)
-        à gauche: 37
-        à droite: 38
+    Valeur (44)
+        à gauche: 31 32 33 34 35 36 37
+        à droite: 5 10 22 29 30 31 32 33 34 37 42 43 44 45 46 47
+    Printf (45)
+        à gauche: 38
+        à droite: 17
+    Condition (46)
+        à gauche: 41
+        à droite: 18
+    $@6 (47)
+        à gauche: 39
+        à droite: 41
+    $@7 (48)
+        à gauche: 40
+        à droite: 41
+    Expression (49)
+        à gauche: 42 43 44 45 46 47
+        à droite: 41 49
+    ConditionWhile (50)
+        à gauche: 49
+        à droite: 19
+    $@8 (51)
+        à gauche: 48
+        à droite: 49
 
 
 État 0
 
     0 $accept: . Programme $end
 
-    tINT  décalage et aller à l'état 1
+    tCONST  décalage et aller à l'état 1
+
+    $défaut  réduction par utilisation de la règle 2 (Consts)
 
     Programme  aller à l'état 2
-    Funs       aller à l'état 3
-    Fun        aller à l'état 4
+    Consts     aller à l'état 3
+    Const      aller à l'état 4
 
 
 État 1
 
-    4 Fun: tINT . tID tPAROPEN Vars tPARCLOSE Bloc
+    5 Const: tCONST . tID Valeur
 
     tID  décalage et aller à l'état 5
 
@@ -183,29 +233,38 @@ Non-terminaux, suivis des règles où ils apparaissent
 
 État 3
 
-    1 Programme: Funs .
+    1 Programme: Consts . Funs
 
-    $défaut  réduction par utilisation de la règle 1 (Programme)
+    tINT  décalage et aller à l'état 7
+
+    Funs  aller à l'état 8
+    Fun   aller à l'état 9
 
 
 État 4
 
-    2 Funs: Fun .
-    3     | Fun . Funs
+    3 Consts: Const .
+    4       | Const . Consts
 
-    tINT  décalage et aller à l'état 1
+    tCONST  décalage et aller à l'état 1
 
-    $défaut  réduction par utilisation de la règle 2 (Funs)
+    tINT      réduction par utilisation de la règle 2 (Consts)
+    tINT      [réduction par utilisation de la règle 3 (Consts)]
+    $défaut  réduction par utilisation de la règle 2 (Consts)
 
-    Funs  aller à l'état 7
-    Fun   aller à l'état 4
+    Consts  aller à l'état 10
+    Const   aller à l'état 4
 
 
 État 5
 
-    4 Fun: tINT tID . tPAROPEN Vars tPARCLOSE Bloc
+    5 Const: tCONST tID . Valeur
 
-    tPAROPEN  décalage et aller à l'état 8
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 14
 
 
 État 6
@@ -217,871 +276,1030 @@ Non-terminaux, suivis des règles où ils apparaissent
 
 État 7
 
-    3 Funs: Fun Funs .
+    8 Fun: tINT . tID tPAROPEN Vars tPARCLOSE Bloc
 
-    $défaut  réduction par utilisation de la règle 3 (Funs)
+    tID  décalage et aller à l'état 15
 
 
 État 8
 
-    4 Fun: tINT tID tPAROPEN . Vars tPARCLOSE Bloc
+    1 Programme: Consts Funs .
 
-    tINT  décalage et aller à l'état 9
-
-    $défaut  réduction par utilisation de la règle 7 (Vars)
-
-    Vars  aller à l'état 10
+    $défaut  réduction par utilisation de la règle 1 (Programme)
 
 
 État 9
 
-    8 Vars: tINT . tID VarsNext
+    6 Funs: Fun .
+    7     | Fun . Funs
 
-    tID  décalage et aller à l'état 11
+    tINT  décalage et aller à l'état 7
+
+    $défaut  réduction par utilisation de la règle 6 (Funs)
+
+    Funs  aller à l'état 16
+    Fun   aller à l'état 9
 
 
 État 10
 
-    4 Fun: tINT tID tPAROPEN Vars . tPARCLOSE Bloc
+    4 Consts: Const Consts .
 
-    tPARCLOSE  décalage et aller à l'état 12
+    $défaut  réduction par utilisation de la règle 4 (Consts)
 
 
 État 11
 
-    8 Vars: tINT tID . VarsNext
+   37 Valeur: tPAROPEN . Valeur tPARCLOSE
 
-    tCOMMA  décalage et aller à l'état 13
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
-    $défaut  réduction par utilisation de la règle 9 (VarsNext)
-
-    VarsNext  aller à l'état 14
+    Valeur  aller à l'état 17
 
 
 État 12
 
-    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE . Bloc
+   35 Valeur: tNB .
 
-    tBRAOPEN  décalage et aller à l'état 15
-
-    Bloc  aller à l'état 16
+    $défaut  réduction par utilisation de la règle 35 (Valeur)
 
 
 État 13
 
-   10 VarsNext: tCOMMA . tINT tID VarsNext
+   36 Valeur: tID .
 
-    tINT  décalage et aller à l'état 17
+    $défaut  réduction par utilisation de la règle 36 (Valeur)
 
 
 État 14
 
-    8 Vars: tINT tID VarsNext .
+    5 Const: tCONST tID Valeur .
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    $défaut  réduction par utilisation de la règle 8 (Vars)
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 5 (Const)
 
 
 État 15
 
-    5 Bloc: tBRAOPEN . Content tBRACLOSE
-    6     | tBRAOPEN . Content tRETURN Valeur tBRACLOSE
+    8 Fun: tINT tID . tPAROPEN Vars tPARCLOSE Bloc
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
-
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 23
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    tPAROPEN  décalage et aller à l'état 22
 
 
 État 16
 
-    4 Fun: tINT tID tPAROPEN Vars tPARCLOSE Bloc .
+    7 Funs: Fun Funs .
 
-    $défaut  réduction par utilisation de la règle 4 (Fun)
+    $défaut  réduction par utilisation de la règle 7 (Funs)
 
 
 État 17
 
-   10 VarsNext: tCOMMA tINT . tID VarsNext
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   37       | tPAROPEN Valeur . tPARCLOSE
 
-    tID  décalage et aller à l'état 29
+    tADD       décalage et aller à l'état 18
+    tMIN       décalage et aller à l'état 19
+    tMUL       décalage et aller à l'état 20
+    tDIV       décalage et aller à l'état 21
+    tPARCLOSE  décalage et aller à l'état 23
 
 
 État 18
 
-   18 Declaration: tINT . tID tEQU $@1 Valeur tSEM
+   31 Valeur: Valeur tADD . Valeur
 
-    tID  décalage et aller à l'état 30
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 24
 
 
 État 19
 
-   27 Printf: tPRINTF . tPAROPEN tID tPARCLOSE tSEM
+   32 Valeur: Valeur tMIN . Valeur
 
-    tPAROPEN  décalage et aller à l'état 31
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 25
 
 
 État 20
 
-   30 Condition: tIF . tPAROPEN Expression tPARCLOSE $@2 Bloc $@3 tELSE Bloc
+   34 Valeur: Valeur tMUL . Valeur
 
-    tPAROPEN  décalage et aller à l'état 32
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 26
 
 
 État 21
 
-   38 ConditionWhile: tWHILE . tPAROPEN Expression tPARCLOSE $@4 Bloc
+   33 Valeur: Valeur tDIV . Valeur
 
-    tPAROPEN  décalage et aller à l'état 33
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 27
 
 
 État 22
 
-   19 Affectation: tID . tEQU Valeur tSEM
+    8 Fun: tINT tID tPAROPEN . Vars tPARCLOSE Bloc
 
-    tEQU  décalage et aller à l'état 34
+    tINT  décalage et aller à l'état 28
+
+    $défaut  réduction par utilisation de la règle 11 (Vars)
+
+    Vars  aller à l'état 29
 
 
 État 23
 
-    5 Bloc: tBRAOPEN Content . tBRACLOSE
-    6     | tBRAOPEN Content . tRETURN Valeur tBRACLOSE
+   37 Valeur: tPAROPEN Valeur tPARCLOSE .
 
-    tBRACLOSE  décalage et aller à l'état 35
-    tRETURN    décalage et aller à l'état 36
+    $défaut  réduction par utilisation de la règle 37 (Valeur)
 
 
 État 24
 
-   12 Content: Declaration . Content
+   31 Valeur: Valeur . tADD Valeur
+   31       | Valeur tADD Valeur .
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
 
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 37
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    $défaut  réduction par utilisation de la règle 31 (Valeur)
 
 
 État 25
 
-   11 Content: Affectation . Content
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   32       | Valeur tMIN Valeur .
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
 
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 38
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    $défaut  réduction par utilisation de la règle 32 (Valeur)
 
 
 État 26
 
-   13 Content: Printf . Content
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   34       | Valeur tMUL Valeur .
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
-
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 39
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    $défaut  réduction par utilisation de la règle 34 (Valeur)
 
 
 État 27
 
-   14 Content: Condition . Content
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   33       | Valeur tDIV Valeur .
+   34       | Valeur . tMUL Valeur
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
-
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 40
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    $défaut  réduction par utilisation de la règle 33 (Valeur)
 
 
 État 28
 
-   15 Content: ConditionWhile . Content
+   12 Vars: tINT . tID VarsNext
 
-    tINT     décalage et aller à l'état 18
-    tPRINTF  décalage et aller à l'état 19
-    tIF      décalage et aller à l'état 20
-    tWHILE   décalage et aller à l'état 21
-    tID      décalage et aller à l'état 22
-
-    $défaut  réduction par utilisation de la règle 16 (Content)
-
-    Content         aller à l'état 41
-    Declaration     aller à l'état 24
-    Affectation     aller à l'état 25
-    Printf          aller à l'état 26
-    Condition       aller à l'état 27
-    ConditionWhile  aller à l'état 28
+    tID  décalage et aller à l'état 30
 
 
 État 29
 
-   10 VarsNext: tCOMMA tINT tID . VarsNext
+    8 Fun: tINT tID tPAROPEN Vars . tPARCLOSE Bloc
 
-    tCOMMA  décalage et aller à l'état 13
-
-    $défaut  réduction par utilisation de la règle 9 (VarsNext)
-
-    VarsNext  aller à l'état 42
+    tPARCLOSE  décalage et aller à l'état 31
 
 
 État 30
 
-   18 Declaration: tINT tID . tEQU $@1 Valeur tSEM
+   12 Vars: tINT tID . VarsNext
 
-    tEQU  décalage et aller à l'état 43
+    tCOMMA  décalage et aller à l'état 32
+
+    $défaut  réduction par utilisation de la règle 13 (VarsNext)
+
+    VarsNext  aller à l'état 33
 
 
 État 31
 
-   27 Printf: tPRINTF tPAROPEN . tID tPARCLOSE tSEM
+    8 Fun: tINT tID tPAROPEN Vars tPARCLOSE . Bloc
 
-    tID  décalage et aller à l'état 44
+    tBRAOPEN  décalage et aller à l'état 34
+
+    Bloc  aller à l'état 35
 
 
 État 32
 
-   30 Condition: tIF tPAROPEN . Expression tPARCLOSE $@2 Bloc $@3 tELSE Bloc
+   14 VarsNext: tCOMMA . tINT tID VarsNext
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur      aller à l'état 48
-    Expression  aller à l'état 49
+    tINT  décalage et aller à l'état 36
 
 
 État 33
 
-   38 ConditionWhile: tWHILE tPAROPEN . Expression tPARCLOSE $@4 Bloc
+   12 Vars: tINT tID VarsNext .
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur      aller à l'état 48
-    Expression  aller à l'état 50
+    $défaut  réduction par utilisation de la règle 12 (Vars)
 
 
 État 34
 
-   19 Affectation: tID tEQU . Valeur tSEM
+    9 Bloc: tBRAOPEN . Content tBRACLOSE
+   10     | tBRAOPEN . Content tRETURN Valeur tBRACLOSE
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
 
-    Valeur  aller à l'état 51
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 42
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 35
 
-    5 Bloc: tBRAOPEN Content tBRACLOSE .
+    8 Fun: tINT tID tPAROPEN Vars tPARCLOSE Bloc .
 
-    $défaut  réduction par utilisation de la règle 5 (Bloc)
+    $défaut  réduction par utilisation de la règle 8 (Fun)
 
 
 État 36
 
-    6 Bloc: tBRAOPEN Content tRETURN . Valeur tBRACLOSE
+   14 VarsNext: tCOMMA tINT . tID VarsNext
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 52
+    tID  décalage et aller à l'état 47
 
 
 État 37
 
-   12 Content: Declaration Content .
+   16 Content: tINT . Declaration Content
 
-    $défaut  réduction par utilisation de la règle 12 (Content)
+    tID  décalage et aller à l'état 48
+
+    Declaration  aller à l'état 49
 
 
 État 38
 
-   11 Content: Affectation Content .
+   38 Printf: tPRINTF . tPAROPEN tID tPARCLOSE tSEM
 
-    $défaut  réduction par utilisation de la règle 11 (Content)
+    tPAROPEN  décalage et aller à l'état 50
 
 
 État 39
 
-   13 Content: Printf Content .
+   41 Condition: tIF . tPAROPEN Expression tPARCLOSE $@6 Bloc $@7 tELSE Bloc
 
-    $défaut  réduction par utilisation de la règle 13 (Content)
+    tPAROPEN  décalage et aller à l'état 51
 
 
 État 40
 
-   14 Content: Condition Content .
+   49 ConditionWhile: tWHILE . tPAROPEN Expression tPARCLOSE $@8 Bloc
 
-    $défaut  réduction par utilisation de la règle 14 (Content)
+    tPAROPEN  décalage et aller à l'état 52
 
 
 État 41
 
-   15 Content: ConditionWhile Content .
+   30 Affectation: tID . tEQU Valeur tSEM
 
-    $défaut  réduction par utilisation de la règle 15 (Content)
+    tEQU  décalage et aller à l'état 53
 
 
 État 42
 
-   10 VarsNext: tCOMMA tINT tID VarsNext .
+    9 Bloc: tBRAOPEN Content . tBRACLOSE
+   10     | tBRAOPEN Content . tRETURN Valeur tBRACLOSE
 
-    $défaut  réduction par utilisation de la règle 10 (VarsNext)
+    tBRACLOSE  décalage et aller à l'état 54
+    tRETURN    décalage et aller à l'état 55
 
 
 État 43
 
-   18 Declaration: tINT tID tEQU . $@1 Valeur tSEM
+   15 Content: Affectation . Content
 
-    $défaut  réduction par utilisation de la règle 17 ($@1)
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
 
-    $@1  aller à l'état 53
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 56
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 44
 
-   27 Printf: tPRINTF tPAROPEN tID . tPARCLOSE tSEM
+   17 Content: Printf . Content
 
-    tPARCLOSE  décalage et aller à l'état 54
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
+
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 57
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 45
 
-   26 Valeur: tPAROPEN . Valeur tPARCLOSE
+   18 Content: Condition . Content
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
 
-    Valeur  aller à l'état 55
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 58
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 46
 
-   24 Valeur: tNB .
+   19 Content: ConditionWhile . Content
 
-    $défaut  réduction par utilisation de la règle 24 (Valeur)
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
+
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 59
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 47
 
-   25 Valeur: tID .
+   14 VarsNext: tCOMMA tINT tID . VarsNext
 
-    $défaut  réduction par utilisation de la règle 25 (Valeur)
+    tCOMMA  décalage et aller à l'état 32
+
+    $défaut  réduction par utilisation de la règle 13 (VarsNext)
+
+    VarsNext  aller à l'état 60
 
 
 État 48
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   31 Expression: Valeur . tINF Valeur
-   32           | Valeur . tSUP Valeur
-   33           | Valeur . tEQU tEQU Valeur
-   34           | Valeur . tINF tEQU Valeur
-   35           | Valeur . tSUP tEQU Valeur
-   36           | Valeur .
+   22 Declaration: tID . tEQU $@1 Valeur tSEM
+   24            | tID . $@2 tSEM
+   26            | tID . $@3 tCOMMA Declaration
+   29            | tID . tEQU $@4 Valeur $@5 tCOMMA Declaration
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-    tEQU  décalage et aller à l'état 60
-    tSUP  décalage et aller à l'état 61
-    tINF  décalage et aller à l'état 62
+    tEQU  décalage et aller à l'état 61
 
-    $défaut  réduction par utilisation de la règle 36 (Expression)
+    tCOMMA    réduction par utilisation de la règle 25 ($@3)
+    $défaut  réduction par utilisation de la règle 23 ($@2)
+
+    $@2  aller à l'état 62
+    $@3  aller à l'état 63
 
 
 État 49
 
-   30 Condition: tIF tPAROPEN Expression . tPARCLOSE $@2 Bloc $@3 tELSE Bloc
+   16 Content: tINT Declaration . Content
 
-    tPARCLOSE  décalage et aller à l'état 63
+    tINT     décalage et aller à l'état 37
+    tPRINTF  décalage et aller à l'état 38
+    tIF      décalage et aller à l'état 39
+    tWHILE   décalage et aller à l'état 40
+    tID      décalage et aller à l'état 41
+
+    $défaut  réduction par utilisation de la règle 20 (Content)
+
+    Content         aller à l'état 64
+    Affectation     aller à l'état 43
+    Printf          aller à l'état 44
+    Condition       aller à l'état 45
+    ConditionWhile  aller à l'état 46
 
 
 État 50
 
-   38 ConditionWhile: tWHILE tPAROPEN Expression . tPARCLOSE $@4 Bloc
+   38 Printf: tPRINTF tPAROPEN . tID tPARCLOSE tSEM
 
-    tPARCLOSE  décalage et aller à l'état 64
+    tID  décalage et aller à l'état 65
 
 
 État 51
 
-   19 Affectation: tID tEQU Valeur . tSEM
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
+   41 Condition: tIF tPAROPEN . Expression tPARCLOSE $@6 Bloc $@7 tELSE Bloc
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-    tSEM  décalage et aller à l'état 65
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur      aller à l'état 66
+    Expression  aller à l'état 67
 
 
 État 52
 
-    6 Bloc: tBRAOPEN Content tRETURN Valeur . tBRACLOSE
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
+   49 ConditionWhile: tWHILE tPAROPEN . Expression tPARCLOSE $@8 Bloc
 
-    tADD       décalage et aller à l'état 56
-    tMIN       décalage et aller à l'état 57
-    tMUL       décalage et aller à l'état 58
-    tDIV       décalage et aller à l'état 59
-    tBRACLOSE  décalage et aller à l'état 66
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur      aller à l'état 66
+    Expression  aller à l'état 68
 
 
 État 53
 
-   18 Declaration: tINT tID tEQU $@1 . Valeur tSEM
+   30 Affectation: tID tEQU . Valeur tSEM
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
-    Valeur  aller à l'état 67
+    Valeur  aller à l'état 69
 
 
 État 54
 
-   27 Printf: tPRINTF tPAROPEN tID tPARCLOSE . tSEM
+    9 Bloc: tBRAOPEN Content tBRACLOSE .
 
-    tSEM  décalage et aller à l'état 68
+    $défaut  réduction par utilisation de la règle 9 (Bloc)
 
 
 État 55
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   26       | tPAROPEN Valeur . tPARCLOSE
+   10 Bloc: tBRAOPEN Content tRETURN . Valeur tBRACLOSE
 
-    tADD       décalage et aller à l'état 56
-    tMIN       décalage et aller à l'état 57
-    tMUL       décalage et aller à l'état 58
-    tDIV       décalage et aller à l'état 59
-    tPARCLOSE  décalage et aller à l'état 69
-
-
-État 56
-
-   20 Valeur: Valeur tADD . Valeur
-
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
     Valeur  aller à l'état 70
 
 
+État 56
+
+   15 Content: Affectation Content .
+
+    $défaut  réduction par utilisation de la règle 15 (Content)
+
+
 État 57
 
-   21 Valeur: Valeur tMIN . Valeur
+   17 Content: Printf Content .
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 71
+    $défaut  réduction par utilisation de la règle 17 (Content)
 
 
 État 58
 
-   23 Valeur: Valeur tMUL . Valeur
+   18 Content: Condition Content .
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 72
+    $défaut  réduction par utilisation de la règle 18 (Content)
 
 
 État 59
 
-   22 Valeur: Valeur tDIV . Valeur
+   19 Content: ConditionWhile Content .
 
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 73
+    $défaut  réduction par utilisation de la règle 19 (Content)
 
 
 État 60
 
-   33 Expression: Valeur tEQU . tEQU Valeur
+   14 VarsNext: tCOMMA tINT tID VarsNext .
 
-    tEQU  décalage et aller à l'état 74
+    $défaut  réduction par utilisation de la règle 14 (VarsNext)
 
 
 État 61
 
-   32 Expression: Valeur tSUP . Valeur
-   35           | Valeur tSUP . tEQU Valeur
+   22 Declaration: tID tEQU . $@1 Valeur tSEM
+   29            | tID tEQU . $@4 Valeur $@5 tCOMMA Declaration
 
-    tEQU      décalage et aller à l'état 75
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tPAROPEN  réduction par utilisation de la règle 21 ($@1)
+    tPAROPEN  [réduction par utilisation de la règle 27 ($@4)]
+    tNB       réduction par utilisation de la règle 21 ($@1)
+    tNB       [réduction par utilisation de la règle 27 ($@4)]
+    tID       réduction par utilisation de la règle 21 ($@1)
+    tID       [réduction par utilisation de la règle 27 ($@4)]
+    $défaut  réduction par utilisation de la règle 21 ($@1)
 
-    Valeur  aller à l'état 76
+    $@1  aller à l'état 71
+    $@4  aller à l'état 72
 
 
 État 62
 
-   31 Expression: Valeur tINF . Valeur
-   34           | Valeur tINF . tEQU Valeur
+   24 Declaration: tID $@2 . tSEM
 
-    tEQU      décalage et aller à l'état 77
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 78
+    tSEM  décalage et aller à l'état 73
 
 
 État 63
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE . $@2 Bloc $@3 tELSE Bloc
+   26 Declaration: tID $@3 . tCOMMA Declaration
 
-    $défaut  réduction par utilisation de la règle 28 ($@2)
-
-    $@2  aller à l'état 79
+    tCOMMA  décalage et aller à l'état 74
 
 
 État 64
 
-   38 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE . $@4 Bloc
+   16 Content: tINT Declaration Content .
 
-    $défaut  réduction par utilisation de la règle 37 ($@4)
-
-    $@4  aller à l'état 80
+    $défaut  réduction par utilisation de la règle 16 (Content)
 
 
 État 65
 
-   19 Affectation: tID tEQU Valeur tSEM .
+   38 Printf: tPRINTF tPAROPEN tID . tPARCLOSE tSEM
 
-    $défaut  réduction par utilisation de la règle 19 (Affectation)
+    tPARCLOSE  décalage et aller à l'état 75
 
 
 État 66
 
-    6 Bloc: tBRAOPEN Content tRETURN Valeur tBRACLOSE .
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   42 Expression: Valeur . tINF Valeur
+   43           | Valeur . tSUP Valeur
+   44           | Valeur . tEQU tEQU Valeur
+   45           | Valeur . tINF tEQU Valeur
+   46           | Valeur . tSUP tEQU Valeur
+   47           | Valeur .
 
-    $défaut  réduction par utilisation de la règle 6 (Bloc)
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+    tEQU  décalage et aller à l'état 76
+    tSUP  décalage et aller à l'état 77
+    tINF  décalage et aller à l'état 78
+
+    $défaut  réduction par utilisation de la règle 47 (Expression)
 
 
 État 67
 
-   18 Declaration: tINT tID tEQU $@1 Valeur . tSEM
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
+   41 Condition: tIF tPAROPEN Expression . tPARCLOSE $@6 Bloc $@7 tELSE Bloc
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-    tSEM  décalage et aller à l'état 81
+    tPARCLOSE  décalage et aller à l'état 79
 
 
 État 68
 
-   27 Printf: tPRINTF tPAROPEN tID tPARCLOSE tSEM .
+   49 ConditionWhile: tWHILE tPAROPEN Expression . tPARCLOSE $@8 Bloc
 
-    $défaut  réduction par utilisation de la règle 27 (Printf)
+    tPARCLOSE  décalage et aller à l'état 80
 
 
 État 69
 
-   26 Valeur: tPAROPEN Valeur tPARCLOSE .
+   30 Affectation: tID tEQU Valeur . tSEM
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    $défaut  réduction par utilisation de la règle 26 (Valeur)
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+    tSEM  décalage et aller à l'état 81
 
 
 État 70
 
-   20 Valeur: Valeur . tADD Valeur
-   20       | Valeur tADD Valeur .
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
+   10 Bloc: tBRAOPEN Content tRETURN Valeur . tBRACLOSE
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-
-    $défaut  réduction par utilisation de la règle 20 (Valeur)
+    tADD       décalage et aller à l'état 18
+    tMIN       décalage et aller à l'état 19
+    tMUL       décalage et aller à l'état 20
+    tDIV       décalage et aller à l'état 21
+    tBRACLOSE  décalage et aller à l'état 82
 
 
 État 71
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   21       | Valeur tMIN Valeur .
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
+   22 Declaration: tID tEQU $@1 . Valeur tSEM
 
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-
-    $défaut  réduction par utilisation de la règle 21 (Valeur)
-
-
-État 72
-
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   23       | Valeur tMUL Valeur .
-
-    $défaut  réduction par utilisation de la règle 23 (Valeur)
-
-
-État 73
-
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   22       | Valeur tDIV Valeur .
-   23       | Valeur . tMUL Valeur
-
-    $défaut  réduction par utilisation de la règle 22 (Valeur)
-
-
-État 74
-
-   33 Expression: Valeur tEQU tEQU . Valeur
-
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
-
-    Valeur  aller à l'état 82
-
-
-État 75
-
-   35 Expression: Valeur tSUP tEQU . Valeur
-
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
     Valeur  aller à l'état 83
 
 
-État 76
+État 72
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   32 Expression: Valeur tSUP Valeur .
+   29 Declaration: tID tEQU $@4 . Valeur $@5 tCOMMA Declaration
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-
-    $défaut  réduction par utilisation de la règle 32 (Expression)
-
-
-État 77
-
-   34 Expression: Valeur tINF tEQU . Valeur
-
-    tPAROPEN  décalage et aller à l'état 45
-    tNB       décalage et aller à l'état 46
-    tID       décalage et aller à l'état 47
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
     Valeur  aller à l'état 84
 
 
+État 73
+
+   24 Declaration: tID $@2 tSEM .
+
+    $défaut  réduction par utilisation de la règle 24 (Declaration)
+
+
+État 74
+
+   26 Declaration: tID $@3 tCOMMA . Declaration
+
+    tID  décalage et aller à l'état 48
+
+    Declaration  aller à l'état 85
+
+
+État 75
+
+   38 Printf: tPRINTF tPAROPEN tID tPARCLOSE . tSEM
+
+    tSEM  décalage et aller à l'état 86
+
+
+État 76
+
+   44 Expression: Valeur tEQU . tEQU Valeur
+
+    tEQU  décalage et aller à l'état 87
+
+
+État 77
+
+   43 Expression: Valeur tSUP . Valeur
+   46           | Valeur tSUP . tEQU Valeur
+
+    tEQU      décalage et aller à l'état 88
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 89
+
+
 État 78
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   31 Expression: Valeur tINF Valeur .
+   42 Expression: Valeur tINF . Valeur
+   45           | Valeur tINF . tEQU Valeur
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
+    tEQU      décalage et aller à l'état 90
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
-    $défaut  réduction par utilisation de la règle 31 (Expression)
+    Valeur  aller à l'état 91
 
 
 État 79
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 . Bloc $@3 tELSE Bloc
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE . $@6 Bloc $@7 tELSE Bloc
 
-    tBRAOPEN  décalage et aller à l'état 15
+    $défaut  réduction par utilisation de la règle 39 ($@6)
 
-    Bloc  aller à l'état 85
+    $@6  aller à l'état 92
 
 
 État 80
 
-   38 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@4 . Bloc
+   49 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE . $@8 Bloc
 
-    tBRAOPEN  décalage et aller à l'état 15
+    $défaut  réduction par utilisation de la règle 48 ($@8)
 
-    Bloc  aller à l'état 86
+    $@8  aller à l'état 93
 
 
 État 81
 
-   18 Declaration: tINT tID tEQU $@1 Valeur tSEM .
+   30 Affectation: tID tEQU Valeur tSEM .
 
-    $défaut  réduction par utilisation de la règle 18 (Declaration)
+    $défaut  réduction par utilisation de la règle 30 (Affectation)
 
 
 État 82
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   33 Expression: Valeur tEQU tEQU Valeur .
+   10 Bloc: tBRAOPEN Content tRETURN Valeur tBRACLOSE .
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-
-    $défaut  réduction par utilisation de la règle 33 (Expression)
+    $défaut  réduction par utilisation de la règle 10 (Bloc)
 
 
 État 83
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   35 Expression: Valeur tSUP tEQU Valeur .
+   22 Declaration: tID tEQU $@1 Valeur . tSEM
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
-
-    $défaut  réduction par utilisation de la règle 35 (Expression)
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+    tSEM  décalage et aller à l'état 94
 
 
 État 84
 
-   20 Valeur: Valeur . tADD Valeur
-   21       | Valeur . tMIN Valeur
-   22       | Valeur . tDIV Valeur
-   23       | Valeur . tMUL Valeur
-   34 Expression: Valeur tINF tEQU Valeur .
+   29 Declaration: tID tEQU $@4 Valeur . $@5 tCOMMA Declaration
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
 
-    tADD  décalage et aller à l'état 56
-    tMIN  décalage et aller à l'état 57
-    tMUL  décalage et aller à l'état 58
-    tDIV  décalage et aller à l'état 59
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
 
-    $défaut  réduction par utilisation de la règle 34 (Expression)
+    $défaut  réduction par utilisation de la règle 28 ($@5)
+
+    $@5  aller à l'état 95
 
 
 État 85
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 Bloc . $@3 tELSE Bloc
+   26 Declaration: tID $@3 tCOMMA Declaration .
 
-    $défaut  réduction par utilisation de la règle 29 ($@3)
-
-    $@3  aller à l'état 87
+    $défaut  réduction par utilisation de la règle 26 (Declaration)
 
 
 État 86
 
-   38 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@4 Bloc .
+   38 Printf: tPRINTF tPAROPEN tID tPARCLOSE tSEM .
 
-    $défaut  réduction par utilisation de la règle 38 (ConditionWhile)
+    $défaut  réduction par utilisation de la règle 38 (Printf)
 
 
 État 87
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 Bloc $@3 . tELSE Bloc
+   44 Expression: Valeur tEQU tEQU . Valeur
 
-    tELSE  décalage et aller à l'état 88
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 96
 
 
 État 88
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 Bloc $@3 tELSE . Bloc
+   46 Expression: Valeur tSUP tEQU . Valeur
 
-    tBRAOPEN  décalage et aller à l'état 15
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
 
-    Bloc  aller à l'état 89
+    Valeur  aller à l'état 97
 
 
 État 89
 
-   30 Condition: tIF tPAROPEN Expression tPARCLOSE $@2 Bloc $@3 tELSE Bloc .
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   43 Expression: Valeur tSUP Valeur .
 
-    $défaut  réduction par utilisation de la règle 30 (Condition)
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 43 (Expression)
+
+
+État 90
+
+   45 Expression: Valeur tINF tEQU . Valeur
+
+    tPAROPEN  décalage et aller à l'état 11
+    tNB       décalage et aller à l'état 12
+    tID       décalage et aller à l'état 13
+
+    Valeur  aller à l'état 98
+
+
+État 91
+
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   42 Expression: Valeur tINF Valeur .
+
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 42 (Expression)
+
+
+État 92
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 . Bloc $@7 tELSE Bloc
+
+    tBRAOPEN  décalage et aller à l'état 34
+
+    Bloc  aller à l'état 99
+
+
+État 93
+
+   49 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@8 . Bloc
+
+    tBRAOPEN  décalage et aller à l'état 34
+
+    Bloc  aller à l'état 100
+
+
+État 94
+
+   22 Declaration: tID tEQU $@1 Valeur tSEM .
+
+    $défaut  réduction par utilisation de la règle 22 (Declaration)
+
+
+État 95
+
+   29 Declaration: tID tEQU $@4 Valeur $@5 . tCOMMA Declaration
+
+    tCOMMA  décalage et aller à l'état 101
+
+
+État 96
+
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   44 Expression: Valeur tEQU tEQU Valeur .
+
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 44 (Expression)
+
+
+État 97
+
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   46 Expression: Valeur tSUP tEQU Valeur .
+
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 46 (Expression)
+
+
+État 98
+
+   31 Valeur: Valeur . tADD Valeur
+   32       | Valeur . tMIN Valeur
+   33       | Valeur . tDIV Valeur
+   34       | Valeur . tMUL Valeur
+   45 Expression: Valeur tINF tEQU Valeur .
+
+    tADD  décalage et aller à l'état 18
+    tMIN  décalage et aller à l'état 19
+    tMUL  décalage et aller à l'état 20
+    tDIV  décalage et aller à l'état 21
+
+    $défaut  réduction par utilisation de la règle 45 (Expression)
+
+
+État 99
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 Bloc . $@7 tELSE Bloc
+
+    $défaut  réduction par utilisation de la règle 40 ($@7)
+
+    $@7  aller à l'état 102
+
+
+État 100
+
+   49 ConditionWhile: tWHILE tPAROPEN Expression tPARCLOSE $@8 Bloc .
+
+    $défaut  réduction par utilisation de la règle 49 (ConditionWhile)
+
+
+État 101
+
+   29 Declaration: tID tEQU $@4 Valeur $@5 tCOMMA . Declaration
+
+    tID  décalage et aller à l'état 48
+
+    Declaration  aller à l'état 103
+
+
+État 102
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 Bloc $@7 . tELSE Bloc
+
+    tELSE  décalage et aller à l'état 104
+
+
+État 103
+
+   29 Declaration: tID tEQU $@4 Valeur $@5 tCOMMA Declaration .
+
+    $défaut  réduction par utilisation de la règle 29 (Declaration)
+
+
+État 104
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 Bloc $@7 tELSE . Bloc
+
+    tBRAOPEN  décalage et aller à l'état 34
+
+    Bloc  aller à l'état 105
+
+
+État 105
+
+   41 Condition: tIF tPAROPEN Expression tPARCLOSE $@6 Bloc $@7 tELSE Bloc .
+
+    $défaut  réduction par utilisation de la règle 41 (Condition)

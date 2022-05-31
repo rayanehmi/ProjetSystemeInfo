@@ -321,8 +321,6 @@ void yyfree ( void *  );
 	}
 #define YY_AT_BOL() (YY_CURRENT_BUFFER_LVALUE->yy_at_bol)
 
-/* Begin user sect3 */
-
 #define yywrap() (/*CONSTCOND*/1)
 #define YY_SKIP_YYWRAP
 typedef flex_uint8_t YY_CHAR;
@@ -384,11 +382,11 @@ static const YY_CHAR yy_ec[256] =
        14,   15,    1,    1,   16,   16,   16,   16,   16,   16,
        16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
        16,   16,   16,   16,   16,   16,   16,   16,   16,   16,
-        1,    1,    1,    1,   17,    1,   16,   16,   18,   16,
+        1,    1,    1,    1,   17,    1,   18,   18,   19,   18,
 
-       19,   20,   16,   21,   22,   16,   16,   23,   16,   24,
-       25,   26,   16,   27,   28,   29,   30,   16,   31,   16,
-       16,   16,   32,    1,   33,    1,    1,    1,    1,    1,
+       20,   21,   18,   22,   23,   18,   18,   24,   18,   25,
+       26,   27,   18,   28,   29,   30,   31,   18,   32,   18,
+       18,   18,   33,    1,   34,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
@@ -405,22 +403,22 @@ static const YY_CHAR yy_ec[256] =
         1,    1,    1,    1,    1
     } ;
 
-static const YY_CHAR yy_meta[34] =
+static const YY_CHAR yy_meta[35] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         2,    1,    1,    1,    1,    2,    2,    2,    2,    2,
         2,    2,    2,    2,    2,    2,    2,    2,    2,    2,
-        2,    1,    1
+        2,    2,    1,    1
     } ;
 
 static const flex_int16_t yy_base[59] =
     {   0,
-        0,    0,   67,   68,   64,   68,   68,   68,   68,   68,
-       68,   68,   68,   23,   68,   68,   68,   68,    0,   40,
-       41,   15,   36,   43,   40,   68,   68,   58,   25,   48,
-        0,   34,   29,    0,   27,   33,   25,   31,   41,   23,
-       31,    0,   25,   18,   24,   17,    0,   16,   16,   22,
-        0,   20,   14,    0,    0,    0,   68,   35
+        0,    0,   68,   69,   65,   69,   69,   69,   69,   69,
+       69,   69,   69,   24,   69,   69,   69,   69,    0,   40,
+       41,   15,   36,   43,   40,   69,   69,   59,   26,   49,
+        0,   34,   29,    0,   27,   33,   25,   31,   42,   23,
+       31,    0,   25,   18,   24,   17,    0,   15,   15,   22,
+        0,   20,   14,    0,    0,    0,   69,   36
     } ;
 
 static const flex_int16_t yy_def[59] =
@@ -433,36 +431,36 @@ static const flex_int16_t yy_def[59] =
        58,   58,   58,   58,   58,   58,    0,   57
     } ;
 
-static const flex_int16_t yy_nxt[102] =
+static const flex_int16_t yy_nxt[104] =
     {   0,
         4,    5,    6,    7,    8,    9,   10,   11,   12,   13,
-       14,   15,   16,   17,   18,   19,    4,   20,   21,   19,
-       19,   22,   19,   19,   19,   23,   24,   19,   19,   19,
-       25,   26,   27,   29,   34,   29,   31,   56,   35,   55,
-       54,   30,   53,   30,   52,   51,   50,   49,   48,   47,
-       46,   39,   45,   44,   43,   42,   41,   40,   39,   28,
-       38,   37,   36,   33,   32,   28,   57,    3,   57,   57,
+       14,   15,   16,   17,   18,    4,    4,   19,   20,   21,
+       19,   19,   22,   19,   19,   19,   23,   24,   19,   19,
+       19,   25,   26,   27,   29,   34,   29,   31,   56,   35,
+       55,   54,   53,   30,   52,   30,   51,   50,   49,   48,
+       47,   46,   39,   45,   44,   43,   42,   41,   40,   39,
+       28,   38,   37,   36,   33,   32,   28,   57,    3,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
 
-       57
+       57,   57,   57
     } ;
 
-static const flex_int16_t yy_chk[102] =
+static const flex_int16_t yy_chk[104] =
     {   0,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
         1,    1,    1,    1,    1,    1,    1,    1,    1,    1,
-        1,    1,    1,   14,   22,   29,   58,   53,   22,   52,
-       50,   14,   49,   29,   48,   46,   45,   44,   43,   41,
-       40,   39,   38,   37,   36,   35,   33,   32,   30,   28,
-       25,   24,   23,   21,   20,    5,    3,   57,   57,   57,
+        1,    1,    1,    1,   14,   22,   29,   58,   53,   22,
+       52,   50,   49,   14,   48,   29,   46,   45,   44,   43,
+       41,   40,   39,   38,   37,   36,   35,   33,   32,   30,
+       28,   25,   24,   23,   21,   20,    5,    3,   57,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
        57,   57,   57,   57,   57,   57,   57,   57,   57,   57,
 
-       57
+       57,   57,   57
     } ;
 
 static yy_state_type yy_last_accepting_state;
@@ -485,9 +483,9 @@ char *yytext;
 /* et des symboles appelés constantes littérales */
 /* #include... */
 #include "y.tab.h"
-#line 489 "lex.yy.c"
+#line 487 "lex.yy.c"
 /* Déclarations des classes et des expressions régulières */
-#line 491 "lex.yy.c"
+#line 489 "lex.yy.c"
 
 #define INITIAL 0
 
@@ -707,7 +705,7 @@ YY_DECL
 #line 11 "lex.l"
 
 
-#line 711 "lex.yy.c"
+#line 709 "lex.yy.c"
 
 	while ( /*CONSTCOND*/1 )		/* loops until end-of-file is reached */
 		{
@@ -740,7 +738,7 @@ yy_match:
 			yy_current_state = yy_nxt[yy_base[yy_current_state] + yy_c];
 			++yy_cp;
 			}
-		while ( yy_base[yy_current_state] != 68 );
+		while ( yy_base[yy_current_state] != 69 );
 
 yy_find_action:
 		yy_act = yy_accept[yy_current_state];
@@ -891,14 +889,12 @@ YY_RULE_SETUP
 #line 46 "lex.l"
 {} 
 	YY_BREAK
-/* commentaires : [//.*\n] {}
- /* Sert a ignorer les tabulations et les retours ligne */
 case 25:
 YY_RULE_SETUP
-#line 49 "lex.l"
+#line 47 "lex.l"
 ECHO;
 	YY_BREAK
-#line 902 "lex.yy.c"
+#line 898 "lex.yy.c"
 case YY_STATE_EOF(INITIAL):
 	yyterminate();
 
@@ -1903,6 +1899,4 @@ void yyfree (void * ptr )
 
 #define YYTABLES_NAME "yytables"
 
-#line 49 "lex.l"
-
-
+#line 47 "lex.l"

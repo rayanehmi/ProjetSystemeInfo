@@ -23,7 +23,7 @@ const {return tCONST;}
     return tNB;
     }
     
-[a-zA-Z]([a-zA-Z]|_|[0-9])* {
+[a-z]([a-zA-Z]|_|[0-9])* {
     strcpy(yylval.str, yytext);
     return tID;
     }
@@ -44,6 +44,3 @@ const {return tCONST;}
 "," {return tCOMMA;}
 "\"" {return tQUOTE;}
 [ \t\n]+  {} 
- /* commentaires : [//.*\n] {}
- /* Sert a ignorer les tabulations et les retours ligne */
-%%

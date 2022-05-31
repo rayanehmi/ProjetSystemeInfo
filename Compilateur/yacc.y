@@ -25,7 +25,9 @@ void yyerror(char *s);
 
     /* Programme & Fonctions & Variables */
 
-Programme: Funs;
+Programme: Consts Funs;
+Consts: | Const | Const Consts
+Const: tCONST tID Valeur 
 Funs: Fun | Fun Funs ;
 Fun: 
   tINT tID tPAROPEN Vars tPARCLOSE Bloc;
@@ -44,17 +46,29 @@ VarsNext: | tCOMMA tINT tID VarsNext ;
 
 Content: 
   Affectation Content 
-| Declaration Content 
+| tINT Declaration Content 
 | Printf Content
 | Condition Content 
 | ConditionWhile Content 
 | ;
 
-Declaration: tINT tID tEQU {add_symbol($2,"int");printf("xxxxxx\n"); print_ts();} Valeur tSEM {
+Declaration: tID tEQU {add_symbol($1,"int");printf("xxxxxx\n"); print_ts();} Valeur tSEM {
   int Temp = derniere();
   freeVar(); 
-  add_inst3(COP,getAddr($2),Temp);
+  add_inst3(COP,getAddr($1),Temp);
   }
+  | tID  {int add = addTmp();
+        add_inst3(AFC,add,getAddr($1));
+       } tSEM
+  | tID {int add = addTmp();
+        add_inst3(AFC,add,getAddr($1));
+       } tCOMMA Declaration
+  |tID tEQU {add_symbol($1,"int");printf("xxxxxx\n"); print_ts();} Valeur {
+  int Temp = derniere();
+  freeVar(); 
+  add_inst3(COP,getAddr($1),Temp);
+  } tCOMMA Declaration
+
 
 Affectation: tID tEQU Valeur tSEM {
   int Temp = derniere();

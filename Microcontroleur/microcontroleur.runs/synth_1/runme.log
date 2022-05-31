@@ -14,30 +14,29 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 26378 
+INFO: Helper process launched with PID 65731 
 ---------------------------------------------------------------------------------
-Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.273 ; gain = 83.828 ; free physical = 58015 ; free virtual = 69884
+Starting Synthesize : Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 1255.270 ; gain = 83.828 ; free physical = 58891 ; free virtual = 70606
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'CheminDeDonnees' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:45]
-INFO: [Synth 8-3491] module 'BR' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:35' bound to instance 'Label_br' of component 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:140]
+INFO: [Synth 8-638] synthesizing module 'CheminDeDonnees' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:77]
+INFO: [Synth 8-3491] module 'BR' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:35' bound to instance 'Label_br' of component 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:172]
 INFO: [Synth 8-638] synthesizing module 'BR' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:48]
 INFO: [Synth 8-256] done synthesizing module 'BR' (1#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:48]
-INFO: [Synth 8-3491] module 'UAL' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:34' bound to instance 'Label_ual' of component 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:152]
+INFO: [Synth 8-3491] module 'UAL' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:34' bound to instance 'Label_ual' of component 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:184]
 INFO: [Synth 8-638] synthesizing module 'UAL' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:46]
 INFO: [Synth 8-256] done synthesizing module 'UAL' (2#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:46]
-INFO: [Synth 8-3491] module 'BMD' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:35' bound to instance 'Label_bmd' of component 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:162]
+INFO: [Synth 8-3491] module 'BMD' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:35' bound to instance 'Label_bmd' of component 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:194]
 INFO: [Synth 8-638] synthesizing module 'BMD' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:44]
 INFO: [Synth 8-256] done synthesizing module 'BMD' (3#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:44]
-INFO: [Synth 8-3491] module 'BMI' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:34' bound to instance 'Label_bmi' of component 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:171]
+INFO: [Synth 8-3491] module 'BMI' declared at '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:34' bound to instance 'Label_bmi' of component 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:203]
 INFO: [Synth 8-638] synthesizing module 'BMI' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:40]
 INFO: [Synth 8-256] done synthesizing module 'BMI' (4#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BMI.vhd:40]
-WARNING: [Synth 8-6014] Unused sequential element op_memre_reg was removed.  [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:198]
-WARNING: [Synth 8-3848] Net S_W2 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:41]
-WARNING: [Synth 8-3848] Net LC_converter_UAL in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:114]
-WARNING: [Synth 8-3848] Net LC_converter_BMD in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:115]
-WARNING: [Synth 8-3848] Net MUX_converter_BMD_1 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:120]
-WARNING: [Synth 8-3848] Net reset in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:130]
-INFO: [Synth 8-256] done synthesizing module 'CheminDeDonnees' (5#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:45]
+WARNING: [Synth 8-6014] Unused sequential element op_memre_reg was removed.  [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:226]
+WARNING: [Synth 8-3848] Net S_W2 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:73]
+WARNING: [Synth 8-3848] Net LC_converter_BMD in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:145]
+WARNING: [Synth 8-3848] Net MUX_converter_BMD_1 in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:150]
+WARNING: [Synth 8-3848] Net reset in module/entity CheminDeDonnees does not have driver. [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:161]
+INFO: [Synth 8-256] done synthesizing module 'CheminDeDonnees' (5#1) [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd:77]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port S_W2
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port RST
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port C[7]
@@ -74,10 +73,10 @@ WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[2]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[1]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[0]
 ---------------------------------------------------------------------------------
-Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.898 ; gain = 128.453 ; free physical = 58024 ; free virtual = 69893
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58901 ; free virtual = 70616
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.898 ; gain = 128.453 ; free physical = 58024 ; free virtual = 69893
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1299.895 ; gain = 128.453 ; free physical = 58901 ; free virtual = 70617
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -85,7 +84,7 @@ Start Loading Part and Timing Information
 Loading part: xc7a35tcpg236-1
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.902 ; gain = 136.457 ; free physical = 58023 ; free virtual = 69892
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1307.898 ; gain = 136.457 ; free physical = 58901 ; free virtual = 70617
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5546] ROM "s_Mem_reg[0]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[1]" won't be mapped to RAM because it is too sparse
@@ -135,12 +134,9 @@ INFO: [Synth 8-5546] ROM "s_Mem_reg[28]" won't be mapped to RAM because it is to
 INFO: [Synth 8-5546] ROM "s_Mem_reg[29]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[30]" won't be mapped to RAM because it is too sparse
 INFO: [Synth 8-5546] ROM "s_Mem_reg[31]" won't be mapped to RAM because it is too sparse
-WARNING: [Synth 8-327] inferring latch for variable 'QA_reg' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:56]
-WARNING: [Synth 8-327] inferring latch for variable 'QB_reg' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd:57]
-WARNING: [Synth 8-327] inferring latch for variable 'S_reg' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/UAL.vhd:74]
 WARNING: [Synth 8-327] inferring latch for variable 'S_OUT_reg' [/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/MB.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1324.926 ; gain = 153.480 ; free physical = 57996 ; free virtual = 69865
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1323.914 ; gain = 152.473 ; free physical = 58874 ; free virtual = 70589
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -159,15 +155,13 @@ Detailed RTL Component Info :
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	               27 Bit    Registers := 1     
-	                8 Bit    Registers := 62    
+	                8 Bit    Registers := 63    
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   3 Input     27 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 1     
-	   2 Input      8 Bit        Muxes := 2     
+	   4 Input     27 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 6     
 	 256 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 49    
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 48    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -180,15 +174,16 @@ Detailed RTL Component Info :
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
-	                8 Bit    Registers := 14    
+	                8 Bit    Registers := 15    
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input      8 Bit        Muxes := 1     
+	   2 Input      8 Bit        Muxes := 3     
 Module BR 
 Detailed RTL Component Info : 
 +---Registers : 
 	                8 Bit    Registers := 16    
 +---Muxes : 
+	   2 Input      8 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 16    
 Module UAL 
 Detailed RTL Component Info : 
@@ -196,10 +191,7 @@ Detailed RTL Component Info :
 	   2 Input      9 Bit       Adders := 1     
 	   3 Input      9 Bit       Adders := 1     
 +---Muxes : 
-	   4 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
 Module BMD 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -211,7 +203,7 @@ Detailed RTL Component Info :
 +---Registers : 
 	               27 Bit    Registers := 1     
 +---Muxes : 
-	   3 Input     27 Bit        Muxes := 1     
+	   4 Input     27 Bit        Muxes := 1     
 	 256 Input      2 Bit        Muxes := 1     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
@@ -313,30 +305,6 @@ WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[3]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[2]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[1]
 WARNING: [Synth 8-3331] design CheminDeDonnees has unconnected port A[0]
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[7]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[6]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[5]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[4]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[3]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[2]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[1]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QA_reg[0]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[7]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[6]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[5]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[4]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[3]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[2]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[1]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_br/QB_reg[0]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[7]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[6]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[5]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[4]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[3]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[2]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[1]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (Label_ual/S_reg[0]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[7]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[6]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[5]) is unused and will be removed from module CheminDeDonnees.
@@ -345,14 +313,6 @@ WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[3]) is unused an
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[2]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[1]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmd/S_OUT_reg[0]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[7]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[6]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[5]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[4]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[3]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[2]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[1]) is unused and will be removed from module CheminDeDonnees.
-WARNING: [Synth 8-3332] Sequential element (IP_starter_reg[0]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmi/S_OUT_reg[26]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmi/S_OUT_reg[25]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (Label_bmi/S_OUT_reg[24]) is unused and will be removed from module CheminDeDonnees.
@@ -413,9 +373,41 @@ WARNING: [Synth 8-3332] Sequential element (a_memre_reg[2]) is unused and will b
 WARNING: [Synth 8-3332] Sequential element (a_memre_reg[1]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (a_memre_reg[0]) is unused and will be removed from module CheminDeDonnees.
 WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[7]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[6]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[5]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[4]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[3]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_lidi_reg[0]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[7]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[6]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[5]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[4]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[3]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (c_lidi_reg[0]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_lidi_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_lidi_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_lidi_reg[0]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_diex_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_diex_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (op_diex_reg[0]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[7]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[6]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[5]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[4]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[3]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[2]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[1]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (LC_converter_UAL_reg[0]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_memre_reg[7]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_memre_reg[6]) is unused and will be removed from module CheminDeDonnees.
+WARNING: [Synth 8-3332] Sequential element (b_memre_reg[5]) is unused and will be removed from module CheminDeDonnees.
 INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57873 ; free virtual = 69744
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -428,7 +420,7 @@ No constraint files found.
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57873 ; free virtual = 69744
+Finished Timing Optimization : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -440,7 +432,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57873 ; free virtual = 69744
+Finished Technology Mapping : Time (s): cpu = 00:00:07 ; elapsed = 00:00:13 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -464,7 +456,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished IO Insertion : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -477,7 +469,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -489,25 +481,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -533,11 +525,11 @@ Report Instance Areas:
 |1     |top      |       |     1|
 +------+---------+-------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 613 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.012 ; gain = 244.566 ; free physical = 57874 ; free virtual = 69744
-Synthesis Optimization Complete : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1416.020 ; gain = 244.566 ; free physical = 57883 ; free virtual = 69754
+Synthesis finished with 0 errors, 0 critical warnings and 593 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.000 ; gain = 244.559 ; free physical = 58748 ; free virtual = 70466
+Synthesis Optimization Complete : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1416.008 ; gain = 244.559 ; free physical = 58758 ; free virtual = 70476
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
@@ -545,11 +537,11 @@ INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-118 Infos, 180 Warnings, 0 Critical Warnings and 0 Errors encountered.
+118 Infos, 176 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:16 . Memory (MB): peak = 1499.035 ; gain = 339.215 ; free physical = 57848 ; free virtual = 69719
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1499.023 ; gain = 339.207 ; free physical = 58721 ; free virtual = 70438
 WARNING: [Constraints 18-5210] No constraint will be written out.
 INFO: [Common 17-1381] The checkpoint '/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.runs/synth_1/CheminDeDonnees.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file CheminDeDonnees_utilization_synth.rpt -pb CheminDeDonnees_utilization_synth.pb
-report_utilization: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.09 . Memory (MB): peak = 1523.047 ; gain = 0.000 ; free physical = 57848 ; free virtual = 69719
-INFO: [Common 17-206] Exiting Vivado at Fri May 27 16:21:38 2022...
+report_utilization: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.08 . Memory (MB): peak = 1523.035 ; gain = 0.000 ; free physical = 58723 ; free virtual = 70440
+INFO: [Common 17-206] Exiting Vivado at Tue May 31 16:28:38 2022...

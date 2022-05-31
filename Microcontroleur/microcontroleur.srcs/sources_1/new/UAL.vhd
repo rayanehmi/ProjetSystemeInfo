@@ -71,10 +71,11 @@ begin
     
     
     --Affectation du resultat
-    S<=S_mul(7 downto 0) when (Ctrl_Alu="00000010")
-    else S_add(7 downto 0) when (Ctrl_Alu="00000001")
-    else S_sub(7 downto 0) when (Ctrl_Alu="00000100")
-    else S_div(7 downto 0) when (Ctrl_Alu="00000101");
+    S <= S_mul(7 downto 0) when (unsigned(Ctrl_Alu)=2) else
+         S_add(7 downto 0) when (unsigned(Ctrl_Alu)=1) else
+         S_sub(7 downto 0) when (unsigned(Ctrl_Alu)=3) else
+         S_div(7 downto 0) when (unsigned(Ctrl_Alu)=4) else
+         A;
     
 
 end Behavioral;

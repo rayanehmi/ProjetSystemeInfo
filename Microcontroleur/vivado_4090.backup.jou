@@ -1,0 +1,435 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue May 31 09:20:42 2022
+# Process ID: 4090
+# Current directory: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur
+# Command line: vivado
+# Log file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.log
+# Journal file: /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 207
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 208
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 210
+run 120 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+launch_runs impl_1 -jobs 12
+wait_on_run impl_1
+reset_run impl_1 -prev_step 
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd} 56
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/BR.vhd} -line 56
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_BR [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+launch_simulation
+launch_simulation
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_BR.tcl
+restart
+run 120 ns
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_BR.tcl
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_BR.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Test_CD [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sim_1
+current_sim simulation_2
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run 120 ns
+restart
+run 120 ns
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run 120 ns
+restart
+run 120 ns
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 220
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 221
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 223
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 222
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 224
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 221
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 222
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 224
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run 120 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 209
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 210
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 212
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 222
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 223
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 225
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 225
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 212
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 210
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 209
+restart
+run all
+run all
+run all
+run all
+run all
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 225
+run all
+run all
+run all
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 222
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 223
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 225
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+run all
+restart
+restart
+run all
+restart
+run 160 ns
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 203
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 203
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 203
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 203
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 223
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 224
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 226
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+run all
+restart
+run all
+run all
+run all
+run all
+run all
+run all
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 223
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 223
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 224
+add_bp {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} 224
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 223
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 224
+remove_bps -file {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/microcontroleur.srcs/sources_1/new/CheminDeDonnees.vhd} -line 226
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+relaunch_sim
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+relaunch_sim
+restart
+run 160 ns
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+restart
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+relaunch_sim
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run all
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+restart
+run 160 ns
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+run 240 ns
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 12
+wait_on_run synth_1
+save_wave_config {/home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg}
+close_sim
+launch_simulation
+open_wave_config /home/rhachemi/GitHub/ProjetSystemeInfo/Microcontroleur/Test_CD_ALU.wcfg
+source Test_CD.tcl
+close_sim
+close_sim
